@@ -1,0 +1,915 @@
+{
+  "metadata": {
+    "problem": "xor",
+    "description": "XOR: 2 binary inputs + bias -> 1 output. Targets: 0, 1, 1, 0.",
+    "fitness_metric": "max(0, 1 - MSE)",
+    "fitness_target": 0.975,
+    "pop_size": 50,
+    "max_generations": 100,
+    "n_seeds": 30,
+    "depths": [
+      2
+    ],
+    "implementations": [
+      "pureples"
+    ],
+    "started": "2026-04-01T20:10:07.266249",
+    "completed": "2026-04-01T20:12:40.683443"
+  },
+  "runs": [
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 0,
+      "generations_run": 4,
+      "best_fitness": 0.9999999999999996,
+      "solved": true,
+      "solved_gen": 3,
+      "total_time_s": 2.1938068866729736,
+      "final_discovered_nodes": 13,
+      "final_substrate_nodes": 17,
+      "final_cppn_nodes": 1,
+      "final_cppn_connections": 4,
+      "fitness_history_best": [
+        0.7499999999997176,
+        0.7499999999997176,
+        0.7500001435663808,
+        0.9999999999999996
+      ],
+      "fitness_history_mean": [
+        0.5175345444045811,
+        0.5288333847534331,
+        0.534765551327364,
+        0.5444010062130391
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 1,
+      "generations_run": 7,
+      "best_fitness": 0.9999999982412401,
+      "solved": true,
+      "solved_gen": 6,
+      "total_time_s": 4.700773239135742,
+      "final_discovered_nodes": 13,
+      "final_substrate_nodes": 17,
+      "final_cppn_nodes": 1,
+      "final_cppn_connections": 4,
+      "fitness_history_best": [
+        0.7500000000028806,
+        0.7500000000028806,
+        0.9357889998545444,
+        0.9357889998545444,
+        0.9357889998545444,
+        0.9357889998545444,
+        0.9999999982412401
+      ],
+      "fitness_history_mean": [
+        0.5160314115842113,
+        0.5199130373484054,
+        0.5397669840884439,
+        0.5377705135561656,
+        0.5286705645980071,
+        0.5360571730328202,
+        0.5467003482439793
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 2,
+      "generations_run": 6,
+      "best_fitness": 0.9879584712143505,
+      "solved": true,
+      "solved_gen": 5,
+      "total_time_s": 5.164387941360474,
+      "final_discovered_nodes": 12,
+      "final_substrate_nodes": 16,
+      "final_cppn_nodes": 1,
+      "final_cppn_connections": 6,
+      "fitness_history_best": [
+        0.7498622348497217,
+        0.8300416150335073,
+        0.8300416150335073,
+        0.8300416150335073,
+        0.8300416150335073,
+        0.9879584712143505
+      ],
+      "fitness_history_mean": [
+        0.5058063018840415,
+        0.5158148228820807,
+        0.5293547429791221,
+        0.5330279171345612,
+        0.5281808840825258,
+        0.5620275100572454
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 3,
+      "generations_run": 12,
+      "best_fitness": 0.9893341559347781,
+      "solved": true,
+      "solved_gen": 11,
+      "total_time_s": 10.57626223564148,
+      "final_discovered_nodes": 17,
+      "final_substrate_nodes": 21,
+      "final_cppn_nodes": 1,
+      "final_cppn_connections": 4,
+      "fitness_history_best": [
+        0.7515536987906415,
+        0.7890918689571447,
+        0.7890918689571447,
+        0.8280044920530704,
+        0.8280044920530704,
+        0.8280044920530704,
+        0.8873294487618908,
+        0.8873294487618908,
+        0.8873294487618908,
+        0.8873294487618908,
+        0.8873294487618908,
+        0.9893341559347781
+      ],
+      "fitness_history_mean": [
+        0.5085721763493112,
+        0.519732409069849,
+        0.5370872285933398,
+        0.5422990097272447,
+        0.5289444610915573,
+        0.5325798692567654,
+        0.5434231523163864,
+        0.5483358908021294,
+        0.5541541854778658,
+        0.5612405555292032,
+        0.5631821013622278,
+        0.5772120533149644
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 4,
+      "generations_run": 3,
+      "best_fitness": 0.9994666483262731,
+      "solved": true,
+      "solved_gen": 2,
+      "total_time_s": 1.891430139541626,
+      "final_discovered_nodes": 13,
+      "final_substrate_nodes": 17,
+      "final_cppn_nodes": 1,
+      "final_cppn_connections": 5,
+      "fitness_history_best": [
+        0.9065041639442646,
+        0.9065041639442646,
+        0.9994666483262731
+      ],
+      "fitness_history_mean": [
+        0.5207507666990466,
+        0.5355304707190821,
+        0.5401104757393687
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 5,
+      "generations_run": 9,
+      "best_fitness": 0.9965744266520798,
+      "solved": true,
+      "solved_gen": 8,
+      "total_time_s": 6.74092698097229,
+      "final_discovered_nodes": 12,
+      "final_substrate_nodes": 16,
+      "final_cppn_nodes": 1,
+      "final_cppn_connections": 4,
+      "fitness_history_best": [
+        0.75,
+        0.8257249219925222,
+        0.842306958795719,
+        0.842306958795719,
+        0.842306958795719,
+        0.842306958795719,
+        0.842306958795719,
+        0.842306958795719,
+        0.9965744266520798
+      ],
+      "fitness_history_mean": [
+        0.5132966876754003,
+        0.5346279161360492,
+        0.5479425994751504,
+        0.5415997669069992,
+        0.5384431848010666,
+        0.5524977282796877,
+        0.5577130744470524,
+        0.5640548401377092,
+        0.5747578109689173
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 6,
+      "generations_run": 8,
+      "best_fitness": 0.9959354994709636,
+      "solved": true,
+      "solved_gen": 7,
+      "total_time_s": 5.051154851913452,
+      "final_discovered_nodes": 12,
+      "final_substrate_nodes": 16,
+      "final_cppn_nodes": 3,
+      "final_cppn_connections": 7,
+      "fitness_history_best": [
+        0.8083962846197527,
+        0.8083962846197527,
+        0.8083962846197527,
+        0.8748540742261642,
+        0.8748540742261642,
+        0.8748540742261642,
+        0.8748540742261642,
+        0.9959354994709636
+      ],
+      "fitness_history_mean": [
+        0.5172849360489358,
+        0.5284095794009285,
+        0.5457341002301245,
+        0.5394645822027181,
+        0.5498822182722987,
+        0.546966138925583,
+        0.5321874787064356,
+        0.5381612795980867
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 7,
+      "generations_run": 4,
+      "best_fitness": 0.9999684958908857,
+      "solved": true,
+      "solved_gen": 3,
+      "total_time_s": 2.401244878768921,
+      "final_discovered_nodes": 13,
+      "final_substrate_nodes": 17,
+      "final_cppn_nodes": 1,
+      "final_cppn_connections": 5,
+      "fitness_history_best": [
+        0.750000010046497,
+        0.7540290442016023,
+        0.7926505462558372,
+        0.9999684958908857
+      ],
+      "fitness_history_mean": [
+        0.520148800082755,
+        0.5361038906808409,
+        0.5406782389822272,
+        0.5524715895235415
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 8,
+      "generations_run": 5,
+      "best_fitness": 0.9795957919697388,
+      "solved": true,
+      "solved_gen": 4,
+      "total_time_s": 3.3240177631378174,
+      "final_discovered_nodes": 12,
+      "final_substrate_nodes": 16,
+      "final_cppn_nodes": 1,
+      "final_cppn_connections": 4,
+      "fitness_history_best": [
+        0.9267352538973169,
+        0.9267352538973169,
+        0.9267352538973169,
+        0.9267352538973169,
+        0.9795957919697388
+      ],
+      "fitness_history_mean": [
+        0.5126853329049615,
+        0.5244804304841127,
+        0.5545769385680824,
+        0.537217036520208,
+        0.5426479670811166
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 9,
+      "generations_run": 8,
+      "best_fitness": 0.9791103968681547,
+      "solved": true,
+      "solved_gen": 7,
+      "total_time_s": 5.691756248474121,
+      "final_discovered_nodes": 13,
+      "final_substrate_nodes": 17,
+      "final_cppn_nodes": 3,
+      "final_cppn_connections": 9,
+      "fitness_history_best": [
+        0.7034411744016167,
+        0.7836689486777116,
+        0.7836689486777116,
+        0.7836689486777116,
+        0.7836689486777116,
+        0.7836689486777116,
+        0.7836689486777116,
+        0.9791103968681547
+      ],
+      "fitness_history_mean": [
+        0.5101614997863051,
+        0.5189599564156426,
+        0.5309103154717593,
+        0.5466043565216617,
+        0.542229458748265,
+        0.5444502502263625,
+        0.5368148712193442,
+        0.5412812282522197
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 10,
+      "generations_run": 3,
+      "best_fitness": 1.0,
+      "solved": true,
+      "solved_gen": 2,
+      "total_time_s": 3.128031015396118,
+      "final_discovered_nodes": 11,
+      "final_substrate_nodes": 15,
+      "final_cppn_nodes": 1,
+      "final_cppn_connections": 5,
+      "fitness_history_best": [
+        0.8125542217997089,
+        0.8125542217997089,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.5184459713501833,
+        0.5335477012809396,
+        0.5393199755321724
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 11,
+      "generations_run": 4,
+      "best_fitness": 0.9999972108738925,
+      "solved": true,
+      "solved_gen": 3,
+      "total_time_s": 5.018238067626953,
+      "final_discovered_nodes": 15,
+      "final_substrate_nodes": 19,
+      "final_cppn_nodes": 1,
+      "final_cppn_connections": 3,
+      "fitness_history_best": [
+        0.749993473091568,
+        0.8326700859431294,
+        0.9595138157204545,
+        0.9999972108738925
+      ],
+      "fitness_history_mean": [
+        0.5076370497901388,
+        0.5241432254968799,
+        0.5384148037712908,
+        0.5464349723151871
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 12,
+      "generations_run": 13,
+      "best_fitness": 0.9995840641881043,
+      "solved": true,
+      "solved_gen": 12,
+      "total_time_s": 22.800960063934326,
+      "final_discovered_nodes": 12,
+      "final_substrate_nodes": 16,
+      "final_cppn_nodes": 3,
+      "final_cppn_connections": 9,
+      "fitness_history_best": [
+        0.7499993364638771,
+        0.7500003748382968,
+        0.7500003748382968,
+        0.7542137063393396,
+        0.7643370937631456,
+        0.7777056409392105,
+        0.7777056409392105,
+        0.7777056409392105,
+        0.7777056409392105,
+        0.7777056409392105,
+        0.9445438288547158,
+        0.9445438288547158,
+        0.9995840641881043
+      ],
+      "fitness_history_mean": [
+        0.5081879458526791,
+        0.5347063509307051,
+        0.5422441591779416,
+        0.5532927198773525,
+        0.5524822594528871,
+        0.552369213027383,
+        0.5591157462508246,
+        0.5562104664553231,
+        0.5628267051787365,
+        0.5652776893276111,
+        0.5736659453614991,
+        0.5501563723676592,
+        0.5762282079048925
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 13,
+      "generations_run": 2,
+      "best_fitness": 0.997281815422042,
+      "solved": true,
+      "solved_gen": 1,
+      "total_time_s": 2.0030720233917236,
+      "final_discovered_nodes": 9,
+      "final_substrate_nodes": 13,
+      "final_cppn_nodes": 1,
+      "final_cppn_connections": 4,
+      "fitness_history_best": [
+        0.75,
+        0.997281815422042
+      ],
+      "fitness_history_mean": [
+        0.5113593082206487,
+        0.5241709349885968
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 14,
+      "generations_run": 4,
+      "best_fitness": 0.9999970475668027,
+      "solved": true,
+      "solved_gen": 3,
+      "total_time_s": 4.194102048873901,
+      "final_discovered_nodes": 12,
+      "final_substrate_nodes": 16,
+      "final_cppn_nodes": 1,
+      "final_cppn_connections": 5,
+      "fitness_history_best": [
+        0.749961409725258,
+        0.7517322902410224,
+        0.8541370010130063,
+        0.9999970475668027
+      ],
+      "fitness_history_mean": [
+        0.5126495714377842,
+        0.5227582187581754,
+        0.5356314846179848,
+        0.537818671495249
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 15,
+      "generations_run": 9,
+      "best_fitness": 0.9995112288062123,
+      "solved": true,
+      "solved_gen": 8,
+      "total_time_s": 12.4757661819458,
+      "final_discovered_nodes": 12,
+      "final_substrate_nodes": 16,
+      "final_cppn_nodes": 1,
+      "final_cppn_connections": 6,
+      "fitness_history_best": [
+        0.7500995067747482,
+        0.9014681554277556,
+        0.9014681554277556,
+        0.9014681554277556,
+        0.9014681554277556,
+        0.9014681554277556,
+        0.9014681554277556,
+        0.9014681554277556,
+        0.9995112288062123
+      ],
+      "fitness_history_mean": [
+        0.5124716683945886,
+        0.5283965315689362,
+        0.5460538184389008,
+        0.5556800250718819,
+        0.5593473186310283,
+        0.5604942345180691,
+        0.5715361788799285,
+        0.5617170685826051,
+        0.57507761428686
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 16,
+      "generations_run": 5,
+      "best_fitness": 0.9999798038382979,
+      "solved": true,
+      "solved_gen": 4,
+      "total_time_s": 6.3557960987091064,
+      "final_discovered_nodes": 13,
+      "final_substrate_nodes": 17,
+      "final_cppn_nodes": 1,
+      "final_cppn_connections": 4,
+      "fitness_history_best": [
+        0.7499999999999972,
+        0.7502183793419659,
+        0.8108414823302575,
+        0.8108414823302575,
+        0.9999798038382979
+      ],
+      "fitness_history_mean": [
+        0.519084622585903,
+        0.534233018405518,
+        0.5437261372793057,
+        0.5406388073041022,
+        0.5544608481832388
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 17,
+      "generations_run": 3,
+      "best_fitness": 0.9913443936429699,
+      "solved": true,
+      "solved_gen": 2,
+      "total_time_s": 3.17684006690979,
+      "final_discovered_nodes": 13,
+      "final_substrate_nodes": 17,
+      "final_cppn_nodes": 1,
+      "final_cppn_connections": 4,
+      "fitness_history_best": [
+        0.7499999999999999,
+        0.7664661179282921,
+        0.9913443936429699
+      ],
+      "fitness_history_mean": [
+        0.5103825324274165,
+        0.5242761762284939,
+        0.5318929531599068
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 18,
+      "generations_run": 6,
+      "best_fitness": 0.9995828199611179,
+      "solved": true,
+      "solved_gen": 5,
+      "total_time_s": 7.666905879974365,
+      "final_discovered_nodes": 13,
+      "final_substrate_nodes": 17,
+      "final_cppn_nodes": 1,
+      "final_cppn_connections": 4,
+      "fitness_history_best": [
+        0.7493751894259277,
+        0.7514114353512943,
+        0.8011677358347133,
+        0.8011677358347133,
+        0.8011677358347133,
+        0.9995828199611179
+      ],
+      "fitness_history_mean": [
+        0.5068244335911257,
+        0.5170197385658952,
+        0.5308779623343411,
+        0.5394651855348644,
+        0.5357740023014923,
+        0.5409188238691646
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 19,
+      "generations_run": 5,
+      "best_fitness": 0.999732888428472,
+      "solved": true,
+      "solved_gen": 4,
+      "total_time_s": 5.8992979526519775,
+      "final_discovered_nodes": 12,
+      "final_substrate_nodes": 16,
+      "final_cppn_nodes": 1,
+      "final_cppn_connections": 5,
+      "fitness_history_best": [
+        0.8729233717254257,
+        0.8729233717254257,
+        0.8729233717254257,
+        0.8729233717254257,
+        0.999732888428472
+      ],
+      "fitness_history_mean": [
+        0.5086167610120504,
+        0.5210657583392364,
+        0.5370293528297445,
+        0.5323549496324188,
+        0.5553864387715053
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 20,
+      "generations_run": 10,
+      "best_fitness": 0.9999999999863264,
+      "solved": true,
+      "solved_gen": 9,
+      "total_time_s": 16.182764053344727,
+      "final_discovered_nodes": 13,
+      "final_substrate_nodes": 17,
+      "final_cppn_nodes": 2,
+      "final_cppn_connections": 7,
+      "fitness_history_best": [
+        0.750219325400353,
+        0.750219325400353,
+        0.9578370995014378,
+        0.9578370995014378,
+        0.9578370995014378,
+        0.9578370995014378,
+        0.9578370995014378,
+        0.9578370995014378,
+        0.9578370995014378,
+        0.9999999999863264
+      ],
+      "fitness_history_mean": [
+        0.5176419779818329,
+        0.5308375835532986,
+        0.541047233687433,
+        0.5390439511735212,
+        0.5347904187774603,
+        0.5495719034143275,
+        0.545890546844607,
+        0.5645319267526165,
+        0.5624904473203015,
+        0.5578528227665991
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 21,
+      "generations_run": 6,
+      "best_fitness": 0.9999999999970811,
+      "solved": true,
+      "solved_gen": 5,
+      "total_time_s": 7.914045095443726,
+      "final_discovered_nodes": 13,
+      "final_substrate_nodes": 17,
+      "final_cppn_nodes": 1,
+      "final_cppn_connections": 4,
+      "fitness_history_best": [
+        0.7539339791919392,
+        0.7539339791919392,
+        0.7539339791919392,
+        0.777492054817386,
+        0.8392054838780169,
+        0.9999999999970811
+      ],
+      "fitness_history_mean": [
+        0.5162815036315591,
+        0.5360978678407474,
+        0.5349812707289159,
+        0.5370515094606504,
+        0.5391051911338121,
+        0.556342584401981
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 22,
+      "generations_run": 11,
+      "best_fitness": 0.999997842997796,
+      "solved": true,
+      "solved_gen": 10,
+      "total_time_s": 15.252969980239868,
+      "final_discovered_nodes": 10,
+      "final_substrate_nodes": 14,
+      "final_cppn_nodes": 1,
+      "final_cppn_connections": 5,
+      "fitness_history_best": [
+        0.75,
+        0.7976195073716374,
+        0.7976195073716374,
+        0.7976195073716374,
+        0.8501782945017864,
+        0.8501782945017864,
+        0.8501782945017864,
+        0.8501782945017864,
+        0.8501782945017864,
+        0.8501782945017864,
+        0.999997842997796
+      ],
+      "fitness_history_mean": [
+        0.5211369756720459,
+        0.5358676964684203,
+        0.5311577232159548,
+        0.5479917118657764,
+        0.5467477532153002,
+        0.5368251945057119,
+        0.5475818720928461,
+        0.5400555727996856,
+        0.5493360969092878,
+        0.555401636190081,
+        0.564367744444601
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 23,
+      "generations_run": 3,
+      "best_fitness": 0.990104533315112,
+      "solved": true,
+      "solved_gen": 2,
+      "total_time_s": 3.440161943435669,
+      "final_discovered_nodes": 13,
+      "final_substrate_nodes": 17,
+      "final_cppn_nodes": 1,
+      "final_cppn_connections": 4,
+      "fitness_history_best": [
+        0.75,
+        0.8702320865886353,
+        0.990104533315112
+      ],
+      "fitness_history_mean": [
+        0.5185783214299848,
+        0.5423173945033217,
+        0.5399818028789333
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 24,
+      "generations_run": 3,
+      "best_fitness": 0.9997167181940783,
+      "solved": true,
+      "solved_gen": 2,
+      "total_time_s": 4.228612184524536,
+      "final_discovered_nodes": 13,
+      "final_substrate_nodes": 17,
+      "final_cppn_nodes": 1,
+      "final_cppn_connections": 5,
+      "fitness_history_best": [
+        0.7499976549123026,
+        0.7650898392739636,
+        0.9997167181940783
+      ],
+      "fitness_history_mean": [
+        0.5083043437596492,
+        0.5213980436838614,
+        0.5322326951040457
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 25,
+      "generations_run": 3,
+      "best_fitness": 0.9999999999900187,
+      "solved": true,
+      "solved_gen": 2,
+      "total_time_s": 3.4965457916259766,
+      "final_discovered_nodes": 13,
+      "final_substrate_nodes": 17,
+      "final_cppn_nodes": 1,
+      "final_cppn_connections": 4,
+      "fitness_history_best": [
+        0.75,
+        0.75,
+        0.9999999999900187
+      ],
+      "fitness_history_mean": [
+        0.5159646430546789,
+        0.5332332067802511,
+        0.5356841954341895
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 26,
+      "generations_run": 12,
+      "best_fitness": 1.0,
+      "solved": true,
+      "solved_gen": 11,
+      "total_time_s": 18.171086072921753,
+      "final_discovered_nodes": 13,
+      "final_substrate_nodes": 17,
+      "final_cppn_nodes": 2,
+      "final_cppn_connections": 6,
+      "fitness_history_best": [
+        0.7499999870963898,
+        0.7500000052784151,
+        0.8124474342185103,
+        0.8124474342185103,
+        0.8265560562909532,
+        0.8265560562909532,
+        0.8265560562909532,
+        0.8265560562909532,
+        0.9523269903254794,
+        0.9523269903254794,
+        0.9523269903254794,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.5026857438251332,
+        0.5095934316576018,
+        0.5459550325949106,
+        0.5476329170968157,
+        0.5592370471010004,
+        0.5611549813584844,
+        0.5598158349828481,
+        0.5626564410639951,
+        0.5698531829438871,
+        0.5560155298225518,
+        0.5586493892596983,
+        0.5632269576704423
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 27,
+      "generations_run": 2,
+      "best_fitness": 0.9999926144896937,
+      "solved": true,
+      "solved_gen": 1,
+      "total_time_s": 1.5799179077148438,
+      "final_discovered_nodes": 12,
+      "final_substrate_nodes": 16,
+      "final_cppn_nodes": 1,
+      "final_cppn_connections": 5,
+      "fitness_history_best": [
+        0.7503298635181771,
+        0.9999926144896937
+      ],
+      "fitness_history_mean": [
+        0.5112577210214455,
+        0.5304651924548665
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 28,
+      "generations_run": 5,
+      "best_fitness": 0.9999998895879059,
+      "solved": true,
+      "solved_gen": 4,
+      "total_time_s": 7.042181015014648,
+      "final_discovered_nodes": 13,
+      "final_substrate_nodes": 17,
+      "final_cppn_nodes": 1,
+      "final_cppn_connections": 3,
+      "fitness_history_best": [
+        0.75,
+        0.7625755622026074,
+        0.7625755622026074,
+        0.7625755622026074,
+        0.9999998895879059
+      ],
+      "fitness_history_mean": [
+        0.5072871639209523,
+        0.5219340416571739,
+        0.5393166735389028,
+        0.5369947775190761,
+        0.5436647969168156
+      ]
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 29,
+      "generations_run": 2,
+      "best_fitness": 0.9999999999919272,
+      "solved": true,
+      "solved_gen": 1,
+      "total_time_s": 2.179410219192505,
+      "final_discovered_nodes": 13,
+      "final_substrate_nodes": 17,
+      "final_cppn_nodes": 2,
+      "final_cppn_connections": 7,
+      "fitness_history_best": [
+        0.75,
+        0.9999999999919272
+      ],
+      "fitness_history_mean": [
+        0.5118213439538497,
+        0.5331375602182391
+      ]
+    }
+  ]
+}

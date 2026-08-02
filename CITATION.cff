@@ -1,0 +1,95 @@
+cff-version: 1.2.0
+message: "If you use this software or its result data, please cite the paper under preferred-citation, and the Zenodo record for the archived data."
+title: "JAX-ESHN: a JAX/TensorNEAT implementation of ES-HyperNEAT for diagnosing the quadtree substrate-discovery bottleneck"
+abstract: >-
+  JAX-ESHN is a JAX-based ES-HyperNEAT implementation built to characterize, rather than
+  to resolve, the quadtree substrate-discovery bottleneck that prevents population-level
+  vmap vectorization. The repository ships the implementation, a PUREPLES CPU baseline
+  harness, an HSHG ablation, the committed per-seed result data, and analysis and
+  verification scripts that recompute the paper's tables.
+type: software
+license: GPL-3.0-or-later
+repository-code: "https://github.com/RomainClaret/jax-es-hyperneat"
+url: "https://claret.tech/pdf/claret2026quadtree"
+version: "0.1.0"
+date-released: "2026-08-02"
+keywords:
+  - ES-HyperNEAT
+  - neuroevolution
+  - adaptive substrate evolution
+  - CPPN
+  - GPU parallelization
+  - vectorization barriers
+  - quadtree
+  - JAX
+authors:
+  - family-names: Claret
+    given-names: Romain
+    email: romain.claret@unine.ch
+    affiliation: "University of Neuchatel, Information Management Institute"
+    orcid: "https://orcid.org/0000-0002-5612-8471"
+  - family-names: "O'Neill"
+    given-names: Michael
+    email: m.oneill@ucd.ie
+    affiliation: "University College Dublin, Natural Computing Research and Applications Group"
+    orcid: "https://orcid.org/0000-0001-8734-417X"
+  - family-names: Cotofrei
+    given-names: Paul
+    email: paul.cotofrei@unine.ch
+    affiliation: "University of Neuchatel, Information Management Institute"
+    orcid: "https://orcid.org/0000-0002-4103-5467"
+  - family-names: Stoffel
+    given-names: Kilian
+    email: kilian.stoffel@unine.ch
+    affiliation: "University of Neuchatel, Information Management Institute"
+    orcid: "https://orcid.org/0000-0002-9486-7769"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21761118"
+    description: "Zenodo archive of the result data used in the paper"
+preferred-citation:
+  type: article
+  title: "On Scaling Coordinate-Based Neuroevolution: The Quadtree Bottleneck in ES-HyperNEAT"
+  year: 2026
+  url: "https://claret.tech/pdf/claret2026quadtree"
+  notes: "Preprint / technical report"
+  authors:
+    - family-names: Claret
+      given-names: Romain
+      affiliation: "University of Neuchatel, Information Management Institute"
+      orcid: "https://orcid.org/0000-0002-5612-8471"
+    - family-names: "O'Neill"
+      given-names: Michael
+      affiliation: "University College Dublin, Natural Computing Research and Applications Group"
+      orcid: "https://orcid.org/0000-0001-8734-417X"
+    - family-names: Cotofrei
+      given-names: Paul
+      affiliation: "University of Neuchatel, Information Management Institute"
+      orcid: "https://orcid.org/0000-0002-4103-5467"
+    - family-names: Stoffel
+      given-names: Kilian
+      affiliation: "University of Neuchatel, Information Management Institute"
+      orcid: "https://orcid.org/0000-0002-9486-7769"
+references:
+  - type: article
+    title: "An Enhanced Hypercube-Based Encoding for Evolving the Placement, Density, and Connectivity of Neurons"
+    authors:
+      - family-names: Risi
+        given-names: Sebastian
+      - family-names: Stanley
+        given-names: "Kenneth O."
+    doi: "10.1162/artl_a_00071"
+    year: 2012
+  - type: conference-paper
+    title: "Tensor-Accelerated Eager Multi-Resolution Grids for Evolving Large-Scale Substrates"
+    authors:
+      - family-names: Claret
+        given-names: Romain
+      - family-names: "O'Neill"
+        given-names: Michael
+      - family-names: Cotofrei
+        given-names: Paul
+      - family-names: Stoffel
+        given-names: Kilian
+    doi: "10.1145/3795101.3805361"
+    year: 2026

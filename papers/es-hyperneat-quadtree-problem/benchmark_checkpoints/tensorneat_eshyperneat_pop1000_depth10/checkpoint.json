@@ -1,0 +1,81 @@
+{
+  "completed_runs": [
+    "d10_s44",
+    "d10_s43",
+    "d10_s42"
+  ],
+  "results": [
+    {
+      "implementation": "tensorneat-eshyperneat",
+      "depth": 10,
+      "seed": 42,
+      "problem": "xor",
+      "solved": true,
+      "fitness": 1.0,
+      "generations": 1,
+      "jit_compilation_time_s": 22171.520196437836,
+      "time_per_gen_post_jit_s": 0.0,
+      "total_evolution_time_s": 0.0,
+      "total_time_s": 22171.520196437836,
+      "positions": 5592404,
+      "gpu_util_avg": 1.4757814902121553,
+      "gpu_util_max": 7,
+      "vram_peak_mb": 10150,
+      "error": null,
+      "timestamp": "2026-01-23T21:44:11.100222"
+    },
+    {
+      "implementation": "tensorneat-eshyperneat",
+      "depth": 10,
+      "seed": 43,
+      "problem": "xor",
+      "solved": true,
+      "fitness": 1.0,
+      "generations": 1,
+      "jit_compilation_time_s": 21571.942314863205,
+      "time_per_gen_post_jit_s": 0.0,
+      "total_evolution_time_s": 0.0,
+      "total_time_s": 21571.942314863205,
+      "positions": 5592404,
+      "gpu_util_avg": 1.3700148281411415,
+      "gpu_util_max": 7,
+      "vram_peak_mb": 10182,
+      "error": null,
+      "timestamp": "2026-01-24T03:43:54.778215"
+    },
+    {
+      "implementation": "tensorneat-eshyperneat",
+      "depth": 10,
+      "seed": 44,
+      "problem": "xor",
+      "solved": true,
+      "fitness": 1.0,
+      "generations": 1,
+      "jit_compilation_time_s": 22120.78741955757,
+      "time_per_gen_post_jit_s": 0.0,
+      "total_evolution_time_s": 0.0,
+      "total_time_s": 22120.78741955757,
+      "positions": 5592404,
+      "gpu_util_avg": 0.897486181676065,
+      "gpu_util_max": 26,
+      "vram_peak_mb": 10180,
+      "error": null,
+      "timestamp": "2026-01-24T09:52:46.830274"
+    }
+  ],
+  "config": {
+    "depths": [
+      10
+    ],
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "population_size": 1000,
+    "max_generations": 300,
+    "fitness_threshold": 0.98,
+    "timeout_per_run_s": 604800
+  },
+  "start_time": 1769178870.9103358
+}

@@ -1,0 +1,642 @@
+{
+  "metadata": {
+    "purpose": "Isolate pure XLA compile vs first-gen eval vs steady-state per-gen for TensorNEAT ES-HyperNEAT XOR, swept over population.",
+    "reviewer_question": "Does per-CPPN tracing/compilation scale with population, separately from first-gen evaluation?",
+    "backend": "cpu",
+    "jax_version": "0.6.1",
+    "pop_sizes": [
+      50,
+      300,
+      1000
+    ],
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "depths": {
+      "1": [
+        0,
+        1,
+        "S"
+      ],
+      "2": [
+        0,
+        2,
+        "M"
+      ]
+    },
+    "sample_individuals": 3,
+    "full_first_gen_pop_cap": 0,
+    "method": "jax.jit(fn).lower(*args).compile() for pure compile; block_until_ready for execution timing; real runner loop for first-gen vs steady-state.",
+    "note": "CPU backend (matches comparison setup). The quadtree transform is pure Python recursion; only neat.forward (single CPPN), genome.forward (discovered substrate), ask, tell are jittable.",
+    "started": "2026-06-13 18:47:09"
+  },
+  "cells": [
+    {
+      "key": "d1_pop50_seed42",
+      "depth": 1,
+      "initial_depth": 0,
+      "max_depth": 1,
+      "version": "S",
+      "pop_size": 50,
+      "seed": 42,
+      "total_construction_s": 0.5422078748233616,
+      "pure_compiles": {
+        "cppn_forward": {
+          "label": "cppn_forward",
+          "trace_lower_s": 0.10527133313007653,
+          "compile_s": 0.10131749999709427,
+          "exec_first_s": 0.00046716700308024883
+        },
+        "substrate_forward": {
+          "label": "substrate_forward",
+          "trace_lower_s": 0.08975675003603101,
+          "compile_s": 0.19560704100877047,
+          "exec_first_s": 0.0007163339760154486,
+          "discovered_nodes": 4,
+          "substrate_nodes": 8,
+          "total_connections": 18
+        },
+        "neat_ask": {
+          "label": "neat_ask",
+          "trace_lower_s": 0.004207624820992351,
+          "compile_s": 0.08507433417253196,
+          "exec_first_s": 0.0002521658316254616
+        },
+        "neat_tell": {
+          "label": "neat_tell",
+          "trace_lower_s": 3.124258790863678,
+          "compile_s": 7.594546417007223,
+          "exec_first_s": 0.019500707974657416
+        }
+      },
+      "eval_loop": {
+        "pop_size": 50,
+        "sampled_individuals": 3,
+        "per_individual_s": [
+          35.16654224996455,
+          40.77584779099561,
+          39.91946708294563
+        ],
+        "cold_first_individual_s": 35.16654224996455,
+        "mean_warm_individual_s": 40.34765743697062,
+        "projected_first_gen_eval_s": 2012.201756661525,
+        "projected_steady_state_per_gen_s": 2017.382871848531,
+        "ran_full_first_gen": false
+      },
+      "cell_wall_s": 170.26569445803761,
+      "status": "ok"
+    },
+    {
+      "key": "d1_pop300_seed42",
+      "depth": 1,
+      "initial_depth": 0,
+      "max_depth": 1,
+      "version": "S",
+      "pop_size": 300,
+      "seed": 42,
+      "total_construction_s": 1.3726364159956574,
+      "pure_compiles": {
+        "cppn_forward": {
+          "label": "cppn_forward",
+          "trace_lower_s": 0.08117987494915724,
+          "compile_s": 0.16723541705869138,
+          "exec_first_s": 0.0004319169092923403
+        },
+        "substrate_forward": {
+          "label": "substrate_forward",
+          "trace_lower_s": 0.10305600007995963,
+          "compile_s": 0.08597699995152652,
+          "exec_first_s": 0.0004191671032458544,
+          "discovered_nodes": 4,
+          "substrate_nodes": 8,
+          "total_connections": 18
+        },
+        "neat_ask": {
+          "label": "neat_ask",
+          "trace_lower_s": 0.0034938750322908163,
+          "compile_s": 0.01402454194612801,
+          "exec_first_s": 0.00035395799204707146
+        },
+        "neat_tell": {
+          "label": "neat_tell",
+          "trace_lower_s": 2.0854137919377536,
+          "compile_s": 7.040695792064071,
+          "exec_first_s": 0.022167416056618094
+        }
+      },
+      "eval_loop": {
+        "pop_size": 300,
+        "sampled_individuals": 3,
+        "per_individual_s": [
+          39.86835966608487,
+          32.660217916825786,
+          37.75683924998157
+        ],
+        "cold_first_individual_s": 39.86835966608487,
+        "mean_warm_individual_s": 35.20852858340368,
+        "projected_first_gen_eval_s": 10567.218406103784,
+        "projected_steady_state_per_gen_s": 10562.558575021103,
+        "ran_full_first_gen": false
+      },
+      "cell_wall_s": 170.2871458751615,
+      "status": "ok"
+    },
+    {
+      "key": "d1_pop1000_seed42",
+      "depth": 1,
+      "initial_depth": 0,
+      "max_depth": 1,
+      "version": "S",
+      "pop_size": 1000,
+      "seed": 42,
+      "total_construction_s": 0.6956592500209808,
+      "pure_compiles": {
+        "cppn_forward": {
+          "label": "cppn_forward",
+          "trace_lower_s": 0.2620458749588579,
+          "compile_s": 0.18694658391177654,
+          "exec_first_s": 0.0003063331823796034
+        },
+        "substrate_forward": {
+          "label": "substrate_forward",
+          "trace_lower_s": 0.10669070901349187,
+          "compile_s": 0.06885320786386728,
+          "exec_first_s": 0.00029529212042689323,
+          "discovered_nodes": 4,
+          "substrate_nodes": 8,
+          "total_connections": 18
+        },
+        "neat_ask": {
+          "label": "neat_ask",
+          "trace_lower_s": 0.0032723750919103622,
+          "compile_s": 0.020526999840512872,
+          "exec_first_s": 0.0005922501441091299
+        },
+        "neat_tell": {
+          "label": "neat_tell",
+          "trace_lower_s": 3.3230921251233667,
+          "compile_s": 8.015745916869491,
+          "exec_first_s": 0.0368060830514878
+        }
+      },
+      "eval_loop": {
+        "pop_size": 1000,
+        "sampled_individuals": 3,
+        "per_individual_s": [
+          34.63791954098269,
+          33.58151266700588,
+          26.577500292100012
+        ],
+        "cold_first_individual_s": 34.63791954098269,
+        "mean_warm_individual_s": 30.079506479552947,
+        "projected_first_gen_eval_s": 30084.064892614377,
+        "projected_steady_state_per_gen_s": 30079.506479552947,
+        "ran_full_first_gen": false
+      },
+      "cell_wall_s": 154.87064129090868,
+      "status": "ok"
+    },
+    {
+      "key": "d1_pop50_seed43",
+      "depth": 1,
+      "initial_depth": 0,
+      "max_depth": 1,
+      "version": "S",
+      "pop_size": 50,
+      "seed": 43,
+      "total_construction_s": 0.503371125087142,
+      "pure_compiles": {
+        "cppn_forward": {
+          "label": "cppn_forward",
+          "trace_lower_s": 0.3518411251716316,
+          "compile_s": 0.24156262492761016,
+          "exec_first_s": 0.0003511670511215925
+        },
+        "substrate_forward": {
+          "label": "substrate_forward",
+          "trace_lower_s": 0.13226070790551603,
+          "compile_s": 0.11310637509450316,
+          "exec_first_s": 0.00034962501376867294,
+          "discovered_nodes": 4,
+          "substrate_nodes": 8,
+          "total_connections": 10
+        },
+        "neat_ask": {
+          "label": "neat_ask",
+          "trace_lower_s": 0.0026887909043580294,
+          "compile_s": 0.04126662504859269,
+          "exec_first_s": 0.0002460419200360775
+        },
+        "neat_tell": {
+          "label": "neat_tell",
+          "trace_lower_s": 5.093932250048965,
+          "compile_s": 9.593773999949917,
+          "exec_first_s": 0.005188415991142392
+        }
+      },
+      "eval_loop": {
+        "pop_size": 50,
+        "sampled_individuals": 3,
+        "per_individual_s": [
+          38.503923415904865,
+          38.432380999904126,
+          37.03237516712397
+        ],
+        "cold_first_individual_s": 38.503923415904865,
+        "mean_warm_individual_s": 37.73237808351405,
+        "projected_first_gen_eval_s": 1887.3904495080933,
+        "projected_steady_state_per_gen_s": 1886.6189041757025,
+        "ran_full_first_gen": false
+      },
+      "cell_wall_s": 177.67104516690597,
+      "status": "ok"
+    },
+    {
+      "key": "d1_pop50_seed44",
+      "depth": 1,
+      "initial_depth": 0,
+      "max_depth": 1,
+      "version": "S",
+      "pop_size": 50,
+      "seed": 44,
+      "total_construction_s": 0.954291915986687,
+      "pure_compiles": {
+        "cppn_forward": {
+          "label": "cppn_forward",
+          "trace_lower_s": 0.2925732498988509,
+          "compile_s": 0.1728229580912739,
+          "exec_first_s": 0.0006573749706149101
+        },
+        "substrate_forward": {
+          "label": "substrate_forward",
+          "trace_lower_s": 0.1132086249999702,
+          "compile_s": 0.08052550000138581,
+          "exec_first_s": 0.0009529581293463707,
+          "discovered_nodes": 4,
+          "substrate_nodes": 8,
+          "total_connections": 17
+        },
+        "neat_ask": {
+          "label": "neat_ask",
+          "trace_lower_s": 0.003877083072438836,
+          "compile_s": 0.0328577090986073,
+          "exec_first_s": 0.0003497498109936714
+        },
+        "neat_tell": {
+          "label": "neat_tell",
+          "trace_lower_s": 3.5154328329954296,
+          "compile_s": 6.923101874999702,
+          "exec_first_s": 0.007246207911521196
+        }
+      },
+      "eval_loop": {
+        "pop_size": 50,
+        "sampled_individuals": 3,
+        "per_individual_s": [
+          40.75214629084803,
+          48.1633362499997,
+          31.51766337500885
+        ],
+        "cold_first_individual_s": 40.75214629084803,
+        "mean_warm_individual_s": 39.84049981250428,
+        "projected_first_gen_eval_s": 1992.9366371035576,
+        "projected_steady_state_per_gen_s": 1992.0249906252138,
+        "ran_full_first_gen": false
+      },
+      "cell_wall_s": 181.44249312509783,
+      "status": "ok"
+    },
+    {
+      "key": "d1_pop300_seed43",
+      "depth": 1,
+      "initial_depth": 0,
+      "max_depth": 1,
+      "version": "S",
+      "pop_size": 300,
+      "seed": 43,
+      "total_construction_s": 0.870864124968648,
+      "pure_compiles": {
+        "cppn_forward": {
+          "label": "cppn_forward",
+          "trace_lower_s": 0.2771452919114381,
+          "compile_s": 0.3963080409448594,
+          "exec_first_s": 0.0010084169916808605
+        },
+        "substrate_forward": {
+          "label": "substrate_forward",
+          "trace_lower_s": 0.045218834187835455,
+          "compile_s": 0.12073416588827968,
+          "exec_first_s": 0.0017580839339643717,
+          "discovered_nodes": 4,
+          "substrate_nodes": 8,
+          "total_connections": 10
+        },
+        "neat_ask": {
+          "label": "neat_ask",
+          "trace_lower_s": 0.005886000115424395,
+          "compile_s": 0.013827624963596463,
+          "exec_first_s": 0.00030516600236296654
+        },
+        "neat_tell": {
+          "label": "neat_tell",
+          "trace_lower_s": 2.2688949170988053,
+          "compile_s": 6.101909707998857,
+          "exec_first_s": 0.015224582981318235
+        }
+      },
+      "eval_loop": {
+        "pop_size": 300,
+        "sampled_individuals": 3,
+        "per_individual_s": [
+          35.987636000150815,
+          27.545103958807886,
+          41.70272962492891
+        ],
+        "cold_first_individual_s": 35.987636000150815,
+        "mean_warm_individual_s": 34.623916791868396,
+        "projected_first_gen_eval_s": 10388.538756768801,
+        "projected_steady_state_per_gen_s": 10387.175037560519,
+        "ran_full_first_gen": false
+      },
+      "cell_wall_s": 172.35498258308508,
+      "status": "ok"
+    },
+    {
+      "key": "d1_pop300_seed44",
+      "depth": 1,
+      "initial_depth": 0,
+      "max_depth": 1,
+      "version": "S",
+      "pop_size": 300,
+      "seed": 44,
+      "total_construction_s": 0.9489857081789523,
+      "pure_compiles": {
+        "cppn_forward": {
+          "label": "cppn_forward",
+          "trace_lower_s": 0.1105713329743594,
+          "compile_s": 0.11853983392938972,
+          "exec_first_s": 0.0005483750719577074
+        },
+        "substrate_forward": {
+          "label": "substrate_forward",
+          "trace_lower_s": 0.1531457919627428,
+          "compile_s": 0.2602518331259489,
+          "exec_first_s": 0.0002740828786045313,
+          "discovered_nodes": 4,
+          "substrate_nodes": 8,
+          "total_connections": 17
+        },
+        "neat_ask": {
+          "label": "neat_ask",
+          "trace_lower_s": 0.003149749943986535,
+          "compile_s": 0.06957329204306006,
+          "exec_first_s": 0.00028187502175569534
+        },
+        "neat_tell": {
+          "label": "neat_tell",
+          "trace_lower_s": 3.818020791048184,
+          "compile_s": 8.933639249997213,
+          "exec_first_s": 0.029757375130429864
+        }
+      },
+      "eval_loop": {
+        "pop_size": 300,
+        "sampled_individuals": 3,
+        "per_individual_s": [
+          43.130830000154674,
+          38.03591387486085,
+          40.15687575004995
+        ],
+        "cold_first_individual_s": 43.130830000154674,
+        "mean_warm_individual_s": 39.0963948124554,
+        "projected_first_gen_eval_s": 11732.95287892432,
+        "projected_steady_state_per_gen_s": 11728.91844373662,
+        "ran_full_first_gen": false
+      },
+      "cell_wall_s": 190.7338857499417,
+      "status": "ok"
+    },
+    {
+      "key": "d1_pop1000_seed43",
+      "depth": 1,
+      "initial_depth": 0,
+      "max_depth": 1,
+      "version": "S",
+      "pop_size": 1000,
+      "seed": 43,
+      "total_construction_s": 0.5346889579668641,
+      "pure_compiles": {
+        "cppn_forward": {
+          "label": "cppn_forward",
+          "trace_lower_s": 0.10551445907913148,
+          "compile_s": 0.15988208283670247,
+          "exec_first_s": 0.00035125017166137695
+        },
+        "substrate_forward": {
+          "label": "substrate_forward",
+          "trace_lower_s": 0.10522041586227715,
+          "compile_s": 0.09485133411362767,
+          "exec_first_s": 0.0004138329531997442,
+          "discovered_nodes": 4,
+          "substrate_nodes": 8,
+          "total_connections": 10
+        },
+        "neat_ask": {
+          "label": "neat_ask",
+          "trace_lower_s": 0.003656999906525016,
+          "compile_s": 0.03978016693145037,
+          "exec_first_s": 0.000497500179335475
+        },
+        "neat_tell": {
+          "label": "neat_tell",
+          "trace_lower_s": 3.9420987078920007,
+          "compile_s": 8.468849000055343,
+          "exec_first_s": 0.03605479188263416
+        }
+      },
+      "eval_loop": {
+        "pop_size": 1000,
+        "sampled_individuals": 3,
+        "per_individual_s": [
+          34.24308962491341,
+          32.57331158290617,
+          34.358273040968925
+        ],
+        "cold_first_individual_s": 34.24308962491341,
+        "mean_warm_individual_s": 33.46579231193755,
+        "projected_first_gen_eval_s": 33466.569609250524,
+        "projected_steady_state_per_gen_s": 33465.79231193755,
+        "ran_full_first_gen": false
+      },
+      "cell_wall_s": 161.9420749580022,
+      "status": "ok"
+    },
+    {
+      "key": "d1_pop1000_seed44",
+      "depth": 1,
+      "initial_depth": 0,
+      "max_depth": 1,
+      "version": "S",
+      "pop_size": 1000,
+      "seed": 44,
+      "total_construction_s": 0.7510633748024702,
+      "pure_compiles": {
+        "cppn_forward": {
+          "label": "cppn_forward",
+          "trace_lower_s": 0.07241958286613226,
+          "compile_s": 0.10539037501439452,
+          "exec_first_s": 0.0003325419966131449
+        },
+        "substrate_forward": {
+          "label": "substrate_forward",
+          "trace_lower_s": 0.08767129201442003,
+          "compile_s": 0.1818577079102397,
+          "exec_first_s": 0.0005934170912951231,
+          "discovered_nodes": 4,
+          "substrate_nodes": 8,
+          "total_connections": 17
+        },
+        "neat_ask": {
+          "label": "neat_ask",
+          "trace_lower_s": 0.0031232500914484262,
+          "compile_s": 0.026587583124637604,
+          "exec_first_s": 0.0011250840034335852
+        },
+        "neat_tell": {
+          "label": "neat_tell",
+          "trace_lower_s": 3.5965659997891635,
+          "compile_s": 9.271181000163779,
+          "exec_first_s": 0.0557905409950763
+        }
+      },
+      "eval_loop": {
+        "pop_size": 1000,
+        "sampled_individuals": 3,
+        "per_individual_s": [
+          32.773362250067294,
+          38.040973708964884,
+          33.54925608402118
+        ],
+        "cold_first_individual_s": 32.773362250067294,
+        "mean_warm_individual_s": 35.79511489649303,
+        "projected_first_gen_eval_s": 35792.09314384661,
+        "projected_steady_state_per_gen_s": 35795.11489649303,
+        "ran_full_first_gen": false
+      },
+      "cell_wall_s": 158.65227949991822,
+      "status": "ok"
+    },
+    {
+      "key": "d2_pop50_seed42",
+      "depth": 2,
+      "initial_depth": 0,
+      "max_depth": 2,
+      "version": "M",
+      "pop_size": 50,
+      "seed": 42,
+      "total_construction_s": 0.5989433329086751,
+      "pure_compiles": {
+        "cppn_forward": {
+          "label": "cppn_forward",
+          "trace_lower_s": 0.15617325017228723,
+          "compile_s": 0.20551279187202454,
+          "exec_first_s": 0.0020502081606537104
+        },
+        "substrate_forward": {
+          "label": "substrate_forward",
+          "trace_lower_s": 0.10138020804151893,
+          "compile_s": 0.07836304185912013,
+          "exec_first_s": 0.00026162504218518734,
+          "discovered_nodes": 16,
+          "substrate_nodes": 20,
+          "total_connections": 128
+        },
+        "neat_ask": {
+          "label": "neat_ask",
+          "trace_lower_s": 0.0036655410658568144,
+          "compile_s": 0.012171749956905842,
+          "exec_first_s": 0.00022950000129640102
+        },
+        "neat_tell": {
+          "label": "neat_tell",
+          "trace_lower_s": 1.6971079588402063,
+          "compile_s": 4.9165205410681665,
+          "exec_first_s": 0.014554708963260055
+        }
+      },
+      "eval_loop": {
+        "pop_size": 50,
+        "sampled_individuals": 3,
+        "per_individual_s": [
+          367.1264781248756,
+          312.5569267908577,
+          329.3089959160425
+        ],
+        "cold_first_individual_s": 367.1264781248756,
+        "mean_warm_individual_s": 320.9329613534501,
+        "projected_first_gen_eval_s": 16092.84158444393,
+        "projected_steady_state_per_gen_s": 16046.648067672504,
+        "ran_full_first_gen": false
+      },
+      "cell_wall_s": 1345.8039335829671,
+      "status": "ok"
+    },
+    {
+      "key": "d2_pop50_seed43",
+      "depth": 2,
+      "initial_depth": 0,
+      "max_depth": 2,
+      "version": "M",
+      "pop_size": 50,
+      "seed": 43,
+      "total_construction_s": 0.641549332998693,
+      "pure_compiles": {
+        "cppn_forward": {
+          "label": "cppn_forward",
+          "trace_lower_s": 0.0771831669844687,
+          "compile_s": 0.09988016611896455,
+          "exec_first_s": 0.00036554201506078243
+        },
+        "substrate_forward": {
+          "label": "substrate_forward",
+          "trace_lower_s": 0.05695024994201958,
+          "compile_s": 0.09056087513454258,
+          "exec_first_s": 0.00034795794636011124,
+          "discovered_nodes": 13,
+          "substrate_nodes": 17,
+          "total_connections": 59
+        },
+        "neat_ask": {
+          "label": "neat_ask",
+          "trace_lower_s": 0.004222207935526967,
+          "compile_s": 0.014743082923814654,
+          "exec_first_s": 0.0019026671070605516
+        },
+        "neat_tell": {
+          "label": "neat_tell",
+          "trace_lower_s": 4.6914421250112355,
+          "compile_s": 7.175748375011608,
+          "exec_first_s": 0.00529120909050107
+        }
+      },
+      "eval_loop": {
+        "pop_size": 50,
+        "sampled_individuals": 3,
+        "per_individual_s": [
+          272.8960659590084,
+          118.5398472500965,
+          418.2578853331506
+        ],
+        "cold_first_individual_s": 272.8960659590084,
+        "mean_warm_individual_s": 268.39886629162356,
+        "projected_first_gen_eval_s": 13424.440514248563,
+        "projected_steady_state_per_gen_s": 13419.943314581178,
+        "ran_full_first_gen": false
+      },
+      "cell_wall_s": 1078.0203336249106,
+      "status": "ok"
+    }
+  ]
+}

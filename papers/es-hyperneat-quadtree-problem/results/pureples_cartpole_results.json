@@ -1,0 +1,3204 @@
+{
+  "runs": [
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 0,
+      "generations_run": 5,
+      "wall_time_s": 16.52746081352234,
+      "best_fitness": 0.9556000000000001,
+      "final_mean_fitness": 0.035072000000000006,
+      "solved": true,
+      "solve_generation": 4,
+      "final_metrics": {
+        "discovered_nodes": -3,
+        "substrate_nodes": 3,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 0.9556000000000001
+      },
+      "fitness_history_best": [
+        0.35,
+        0.37679999999999997,
+        0.9412,
+        0.9024000000000001,
+        0.9556000000000001
+      ],
+      "fitness_history_mean": [
+        0.02142933333333333,
+        0.023968,
+        0.03137066666666667,
+        0.033504,
+        0.035072000000000006
+      ],
+      "timestamp": "2026-03-17T14:29:16.646601"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 1,
+      "generations_run": 2,
+      "wall_time_s": 9.341469049453735,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.03507733333333333,
+      "solved": true,
+      "solve_generation": 1,
+      "final_metrics": {
+        "discovered_nodes": -2,
+        "substrate_nodes": 4,
+        "cppn_nodes": 1,
+        "cppn_connections": 5,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.4032,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.023349333333333333,
+        0.03507733333333333
+      ],
+      "timestamp": "2026-03-17T14:29:26.010694"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 2,
+      "generations_run": 7,
+      "wall_time_s": 28.407668113708496,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.06934933333333333,
+      "solved": true,
+      "solve_generation": 6,
+      "final_metrics": {
+        "discovered_nodes": -1,
+        "substrate_nodes": 5,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.2488,
+        0.8371999999999999,
+        0.8392000000000002,
+        0.8676,
+        0.8248000000000001,
+        0.8288,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.02029066666666667,
+        0.027258666666666667,
+        0.03132533333333334,
+        0.03206933333333334,
+        0.045656,
+        0.054912,
+        0.06934933333333333
+      ],
+      "timestamp": "2026-03-17T14:29:54.468522"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 3,
+      "generations_run": 6,
+      "wall_time_s": 5.625224828720093,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.047850666666666666,
+      "solved": true,
+      "solve_generation": 5,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 5,
+        "cppn_nodes": 1,
+        "cppn_connections": 5,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.3184,
+        0.5064,
+        0.5,
+        0.4316,
+        0.41479999999999995,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.022512,
+        0.026192000000000003,
+        0.030941333333333335,
+        0.0302,
+        0.03245866666666667,
+        0.047850666666666666
+      ],
+      "timestamp": "2026-03-22T19:31:56.550967"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 4,
+      "generations_run": 6,
+      "wall_time_s": 5.146854877471924,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.03877333333333333,
+      "solved": true,
+      "solve_generation": 5,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 5,
+        "cppn_nodes": 1,
+        "cppn_connections": 5,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.26680000000000004,
+        0.21919999999999998,
+        0.19680000000000003,
+        0.35680000000000006,
+        0.36079999999999995,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.021469333333333333,
+        0.022002666666666667,
+        0.02243466666666667,
+        0.02817333333333333,
+        0.034984,
+        0.03877333333333333
+      ],
+      "timestamp": "2026-03-22T19:32:01.724733"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 5,
+      "generations_run": 4,
+      "wall_time_s": 4.906836986541748,
+      "best_fitness": 0.9736,
+      "final_mean_fitness": 0.03652,
+      "solved": true,
+      "solve_generation": 3,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 3,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 0.9736
+      },
+      "fitness_history_best": [
+        0.252,
+        0.43760000000000004,
+        0.9244,
+        0.9736
+      ],
+      "fitness_history_mean": [
+        0.02134933333333333,
+        0.027789333333333333,
+        0.03352266666666667,
+        0.03652
+      ],
+      "timestamp": "2026-03-22T19:32:06.644178"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 6,
+      "generations_run": 4,
+      "wall_time_s": 3.9242281913757324,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.030685333333333335,
+      "solved": true,
+      "solve_generation": 3,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 3,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.0464,
+        0.0412,
+        0.22679999999999997,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.01898666666666667,
+        0.019354666666666666,
+        0.021885333333333333,
+        0.030685333333333335
+      ],
+      "timestamp": "2026-03-22T19:32:10.579553"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 7,
+      "generations_run": 8,
+      "wall_time_s": 9.640806913375854,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.05950933333333333,
+      "solved": true,
+      "solve_generation": 7,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 5,
+        "cppn_nodes": 3,
+        "cppn_connections": 8,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.2984,
+        0.2924,
+        0.522,
+        0.5424,
+        0.6636,
+        0.646,
+        0.8444,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.021781333333333337,
+        0.021832,
+        0.025208,
+        0.027858666666666667,
+        0.030946666666666667,
+        0.03696266666666667,
+        0.04169333333333334,
+        0.05950933333333333
+      ],
+      "timestamp": "2026-03-22T19:32:20.226138"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 8,
+      "generations_run": 8,
+      "wall_time_s": 8.311324119567871,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.05524266666666667,
+      "solved": true,
+      "solve_generation": 7,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 3,
+        "cppn_nodes": 1,
+        "cppn_connections": 5,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.5700000000000001,
+        0.5236,
+        0.602,
+        0.536,
+        0.654,
+        0.6239999999999999,
+        0.6184000000000001,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.022757333333333334,
+        0.024656,
+        0.027213333333333332,
+        0.028983006535947712,
+        0.03483733333333333,
+        0.034973333333333335,
+        0.044954666666666664,
+        0.05524266666666667
+      ],
+      "timestamp": "2026-03-22T19:32:28.548603"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 9,
+      "generations_run": 2,
+      "wall_time_s": 1.6467010974884033,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.03728,
+      "solved": true,
+      "solve_generation": 1,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 3,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.6256,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.030024000000000002,
+        0.03728
+      ],
+      "timestamp": "2026-03-22T19:32:30.252713"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 10,
+      "generations_run": 1,
+      "wall_time_s": 0.6359682083129883,
+      "best_fitness": 0.9808,
+      "final_mean_fitness": 0.026821333333333332,
+      "solved": true,
+      "solve_generation": 0,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 5,
+        "cppn_nodes": 1,
+        "cppn_connections": 5,
+        "fitness": 0.9808
+      },
+      "fitness_history_best": [
+        0.9808
+      ],
+      "fitness_history_mean": [
+        0.026821333333333332
+      ],
+      "timestamp": "2026-03-22T19:32:30.890621"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 11,
+      "generations_run": 4,
+      "wall_time_s": 6.279611110687256,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.031000000000000003,
+      "solved": true,
+      "solve_generation": 3,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 5,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.2484,
+        0.2524,
+        0.274,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.021045333333333333,
+        0.021722666666666668,
+        0.022821333333333332,
+        0.031000000000000003
+      ],
+      "timestamp": "2026-03-22T19:32:37.175000"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 12,
+      "generations_run": 10,
+      "wall_time_s": 16.370959758758545,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.05648533333333333,
+      "solved": true,
+      "solve_generation": 9,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 4,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.4676,
+        0.4676,
+        0.4768,
+        0.6288,
+        0.5984,
+        0.6184000000000001,
+        0.9007999999999999,
+        0.8076000000000001,
+        0.8048,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.022160000000000003,
+        0.022381333333333333,
+        0.02296,
+        0.03018666666666667,
+        0.029392,
+        0.034133333333333335,
+        0.044434666666666664,
+        0.042077333333333335,
+        0.054776,
+        0.05648533333333333
+      ],
+      "timestamp": "2026-03-22T19:32:53.593532"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 13,
+      "generations_run": 25,
+      "wall_time_s": 41.39327692985535,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.09382666666666667,
+      "solved": true,
+      "solve_generation": 24,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 4,
+        "cppn_nodes": 1,
+        "cppn_connections": 3,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.2056,
+        0.21759999999999996,
+        0.2888,
+        0.392,
+        0.9219999999999999,
+        0.7811999999999999,
+        0.85,
+        0.8352,
+        0.8448,
+        0.7647999999999999,
+        0.8688,
+        0.8528,
+        0.8719999999999999,
+        0.9103999999999999,
+        0.9032,
+        0.8044,
+        0.8151999999999999,
+        0.9151999999999999,
+        0.9188000000000001,
+        0.9475999999999999,
+        0.8872,
+        0.8208,
+        0.8452,
+        0.9404,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.021149333333333332,
+        0.022090666666666668,
+        0.027229333333333338,
+        0.031112,
+        0.04305866666666667,
+        0.04130133333333333,
+        0.04864533333333333,
+        0.046416000000000006,
+        0.050496,
+        0.053448,
+        0.063216,
+        0.06110933333333333,
+        0.06234133333333334,
+        0.06339466666666667,
+        0.06674933333333333,
+        0.06503733333333334,
+        0.06778133333333333,
+        0.076224,
+        0.07904533333333333,
+        0.08080533333333333,
+        0.08197333333333333,
+        0.07933066666666666,
+        0.08497181208053692,
+        0.08940533333333334,
+        0.09382666666666667
+      ],
+      "timestamp": "2026-03-22T19:33:35.009278"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 14,
+      "generations_run": 11,
+      "wall_time_s": 11.212148904800415,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.04844533333333333,
+      "solved": true,
+      "solve_generation": 10,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 4,
+        "cppn_nodes": 1,
+        "cppn_connections": 3,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.0744,
+        0.0972,
+        0.11479999999999999,
+        0.11080000000000001,
+        0.0984,
+        0.1076,
+        0.3952,
+        0.48360000000000003,
+        0.46559999999999996,
+        0.8051999999999999,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.019258666666666667,
+        0.019925333333333333,
+        0.020768000000000002,
+        0.02117866666666667,
+        0.02178666666666667,
+        0.022474666666666667,
+        0.028168000000000002,
+        0.03049333333333333,
+        0.03342820512820513,
+        0.043407999999999995,
+        0.04844533333333333
+      ],
+      "timestamp": "2026-03-22T19:33:46.255822"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 15,
+      "generations_run": 16,
+      "wall_time_s": 23.047497034072876,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.082104,
+      "solved": true,
+      "solve_generation": 15,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 5,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.05800000000000001,
+        0.0796,
+        0.21600000000000003,
+        0.4124,
+        0.5232000000000001,
+        0.5336000000000001,
+        0.5928,
+        0.5319999999999999,
+        0.5528000000000001,
+        0.6348,
+        0.66,
+        0.6848,
+        0.8308,
+        0.8976,
+        0.7971999999999999,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.01932266666666667,
+        0.019845333333333336,
+        0.022935999999999998,
+        0.025544,
+        0.02953333333333334,
+        0.029656000000000002,
+        0.031728,
+        0.03483733333333333,
+        0.036296,
+        0.042957333333333333,
+        0.050512,
+        0.05810133333333333,
+        0.058552,
+        0.075544,
+        0.074984,
+        0.082104
+      ],
+      "timestamp": "2026-03-22T19:34:09.352806"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 16,
+      "generations_run": 15,
+      "wall_time_s": 19.18489098548889,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.06450133333333334,
+      "solved": true,
+      "solve_generation": 14,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 3,
+        "cppn_nodes": 1,
+        "cppn_connections": 3,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.39160000000000006,
+        0.3712,
+        0.39359999999999995,
+        0.3692,
+        0.7044,
+        0.7516,
+        0.7287999999999999,
+        0.836,
+        0.8548,
+        0.8648,
+        0.9172,
+        0.8964000000000001,
+        0.9052,
+        0.9263999999999999,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.021746666666666668,
+        0.023162666666666668,
+        0.02604,
+        0.027978666666666666,
+        0.035464,
+        0.03701066666666667,
+        0.036325333333333334,
+        0.045066666666666665,
+        0.045704,
+        0.047098666666666664,
+        0.04898933333333333,
+        0.048037333333333335,
+        0.057488000000000004,
+        0.06010133333333333,
+        0.06450133333333334
+      ],
+      "timestamp": "2026-03-22T19:34:28.558887"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 17,
+      "generations_run": 8,
+      "wall_time_s": 9.093672037124634,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.047064,
+      "solved": true,
+      "solve_generation": 7,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 5,
+        "cppn_nodes": 2,
+        "cppn_connections": 8,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.12719999999999998,
+        0.17400000000000002,
+        0.1904,
+        0.16360000000000002,
+        0.6768,
+        0.6772,
+        0.5884,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.020768000000000002,
+        0.021413333333333336,
+        0.023136,
+        0.023453333333333336,
+        0.030845333333333336,
+        0.038447999999999996,
+        0.03786933333333333,
+        0.047064
+      ],
+      "timestamp": "2026-03-22T19:34:37.697846"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 18,
+      "generations_run": 12,
+      "wall_time_s": 12.297178983688354,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.061685333333333335,
+      "solved": true,
+      "solve_generation": 11,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 5,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.6135999999999999,
+        0.7764000000000001,
+        0.7764,
+        0.6924,
+        0.852,
+        0.7172000000000001,
+        0.8443999999999999,
+        0.6444000000000001,
+        0.8051999999999999,
+        0.8987999999999999,
+        0.7327999999999999,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.024456000000000002,
+        0.02656,
+        0.030333333333333334,
+        0.02974133333333333,
+        0.044850666666666664,
+        0.044850666666666664,
+        0.04628533333333333,
+        0.045152,
+        0.050749333333333334,
+        0.05733066666666667,
+        0.05618666666666667,
+        0.061685333333333335
+      ],
+      "timestamp": "2026-03-22T19:34:50.030799"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 19,
+      "generations_run": 24,
+      "wall_time_s": 33.51924800872803,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.08939733333333333,
+      "solved": true,
+      "solve_generation": 23,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 5,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.0856,
+        0.562,
+        0.5584,
+        0.702,
+        0.8775999999999999,
+        0.6168,
+        0.6592,
+        0.7160000000000001,
+        0.6388,
+        0.6199999999999999,
+        0.688,
+        0.6616000000000001,
+        0.6935999999999999,
+        0.6716,
+        0.646,
+        0.8008000000000001,
+        0.6556,
+        0.708,
+        0.6524000000000001,
+        0.6492000000000001,
+        0.64,
+        0.6679999999999999,
+        0.7264,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.019434666666666666,
+        0.027165333333333333,
+        0.032208,
+        0.040370666666666666,
+        0.04486933333333334,
+        0.04739466666666667,
+        0.050928,
+        0.05415483870967742,
+        0.05023311258278146,
+        0.05455364238410596,
+        0.052968,
+        0.05474133333333333,
+        0.05412,
+        0.05514736842105263,
+        0.05691920529801325,
+        0.05837066666666666,
+        0.06113333333333333,
+        0.0635841059602649,
+        0.06662933333333333,
+        0.06639735099337749,
+        0.07431523178807947,
+        0.07773866666666666,
+        0.08244238410596026,
+        0.08939733333333333
+      ],
+      "timestamp": "2026-03-22T19:35:23.591924"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 20,
+      "generations_run": 15,
+      "wall_time_s": 20.98860812187195,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.09230666666666666,
+      "solved": true,
+      "solve_generation": 14,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 5,
+        "cppn_nodes": 2,
+        "cppn_connections": 5,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.08520000000000001,
+        0.6448,
+        0.6876,
+        0.708,
+        0.7312,
+        0.6512,
+        0.6927999999999999,
+        0.6479999999999999,
+        0.692,
+        0.6544,
+        0.7036,
+        0.6943999999999999,
+        0.6756,
+        0.6612,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.020629333333333336,
+        0.025226666666666668,
+        0.030994666666666663,
+        0.037544,
+        0.044597333333333336,
+        0.045573333333333334,
+        0.052096,
+        0.054045333333333334,
+        0.06073066666666667,
+        0.065312,
+        0.06957866666666666,
+        0.06745866666666667,
+        0.07457066666666667,
+        0.072048,
+        0.09230666666666666
+      ],
+      "timestamp": "2026-03-22T19:35:44.620364"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 21,
+      "generations_run": 6,
+      "wall_time_s": 5.085716009140015,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.047253333333333335,
+      "solved": true,
+      "solve_generation": 5,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 5,
+        "cppn_nodes": 1,
+        "cppn_connections": 6,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.3924,
+        0.41200000000000003,
+        0.3856,
+        0.4116000000000001,
+        0.6239999999999999,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.021424,
+        0.026229333333333334,
+        0.02756,
+        0.029181333333333333,
+        0.036234666666666665,
+        0.047253333333333335
+      ],
+      "timestamp": "2026-03-22T19:35:49.715398"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 22,
+      "generations_run": 12,
+      "wall_time_s": 14.614547967910767,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.060087999999999996,
+      "solved": true,
+      "solve_generation": 11,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 5,
+        "cppn_nodes": 1,
+        "cppn_connections": 5,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.0772,
+        0.6716,
+        0.7004,
+        0.688,
+        0.6908000000000001,
+        0.6504000000000001,
+        0.7628,
+        0.7015999999999999,
+        0.6888,
+        0.6844,
+        0.7532,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.019845333333333333,
+        0.025896,
+        0.032869333333333334,
+        0.037776000000000004,
+        0.042717333333333336,
+        0.04219733333333334,
+        0.042256,
+        0.043770666666666666,
+        0.04244266666666667,
+        0.04505066666666667,
+        0.04853333333333334,
+        0.060087999999999996
+      ],
+      "timestamp": "2026-03-22T19:36:04.346759"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 23,
+      "generations_run": 4,
+      "wall_time_s": 3.174088954925537,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.03520266666666667,
+      "solved": true,
+      "solve_generation": 3,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 5,
+        "cppn_nodes": 1,
+        "cppn_connections": 3,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.2904,
+        0.2956,
+        0.2948,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.023405333333333334,
+        0.02560266666666667,
+        0.025621192052980135,
+        0.03520266666666667
+      ],
+      "timestamp": "2026-03-22T19:36:07.558452"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 24,
+      "generations_run": 8,
+      "wall_time_s": 9.95188307762146,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.06143733333333334,
+      "solved": true,
+      "solve_generation": 7,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 3,
+        "cppn_nodes": 2,
+        "cppn_connections": 6,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.23559999999999998,
+        0.4204,
+        0.4736000000000001,
+        0.5940000000000001,
+        0.8036,
+        0.8032,
+        0.6824,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.020866666666666665,
+        0.027952,
+        0.03483733333333333,
+        0.039176,
+        0.05328,
+        0.05076800000000001,
+        0.055634666666666666,
+        0.06143733333333334
+      ],
+      "timestamp": "2026-03-22T19:36:17.527987"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 25,
+      "generations_run": 10,
+      "wall_time_s": 10.424187898635864,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.04713066666666667,
+      "solved": true,
+      "solve_generation": 9,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 3,
+        "cppn_nodes": 1,
+        "cppn_connections": 3,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.0432,
+        0.12840000000000001,
+        0.2536,
+        0.2492,
+        0.2532,
+        0.22359999999999997,
+        0.23280000000000003,
+        0.26280000000000003,
+        0.2864,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.019189333333333333,
+        0.020645333333333335,
+        0.022461333333333333,
+        0.023442666666666667,
+        0.024165333333333334,
+        0.024464,
+        0.027130666666666668,
+        0.02972,
+        0.031224000000000002,
+        0.04713066666666667
+      ],
+      "timestamp": "2026-03-22T19:36:28.014921"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 26,
+      "generations_run": 4,
+      "wall_time_s": 3.0717251300811768,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.032146666666666664,
+      "solved": true,
+      "solve_generation": 3,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 5,
+        "cppn_nodes": 2,
+        "cppn_connections": 7,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.024399999999999998,
+        0.07399999999999998,
+        0.47800000000000004,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.018794666666666668,
+        0.019509333333333333,
+        0.022768,
+        0.032146666666666664
+      ],
+      "timestamp": "2026-03-22T19:36:31.113972"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 27,
+      "generations_run": 4,
+      "wall_time_s": 3.618237018585205,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.031557894736842104,
+      "solved": true,
+      "solve_generation": 3,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 3,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.516,
+        0.8943999999999999,
+        0.7336,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.022138666666666668,
+        0.028776,
+        0.030437333333333334,
+        0.031557894736842104
+      ],
+      "timestamp": "2026-03-22T19:36:34.740732"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 28,
+      "generations_run": 5,
+      "wall_time_s": 4.416817903518677,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.034549333333333335,
+      "solved": true,
+      "solve_generation": 4,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 4,
+        "cppn_nodes": 2,
+        "cppn_connections": 7,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.4532,
+        0.43999999999999995,
+        0.5124000000000001,
+        0.41080000000000005,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.02168,
+        0.022322666666666664,
+        0.026258666666666666,
+        0.027200000000000002,
+        0.034549333333333335
+      ],
+      "timestamp": "2026-03-22T19:36:39.160935"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 2,
+      "seed": 29,
+      "generations_run": 9,
+      "wall_time_s": 11.211430072784424,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.05677600000000001,
+      "solved": true,
+      "solve_generation": 8,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 3,
+        "cppn_nodes": 2,
+        "cppn_connections": 7,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.3192,
+        0.33399999999999996,
+        0.3472,
+        0.4,
+        0.3912,
+        0.7036,
+        0.6712,
+        0.6811999999999999,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.022533333333333332,
+        0.023354666666666666,
+        0.026957333333333337,
+        0.029896,
+        0.031738666666666665,
+        0.03917866666666667,
+        0.03959466666666667,
+        0.04865066666666667,
+        0.05677600000000001
+      ],
+      "timestamp": "2026-03-22T19:36:50.376192"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 0,
+      "generations_run": 1,
+      "wall_time_s": 2.3560068607330322,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.03338133333333333,
+      "solved": true,
+      "solve_generation": 0,
+      "final_metrics": {
+        "discovered_nodes": 11,
+        "substrate_nodes": 17,
+        "cppn_nodes": 1,
+        "cppn_connections": 5,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.03338133333333333
+      ],
+      "timestamp": "2026-03-22T19:36:52.749939"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 1,
+      "generations_run": 6,
+      "wall_time_s": 25.409433841705322,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.07569066666666667,
+      "solved": true,
+      "solve_generation": 5,
+      "final_metrics": {
+        "discovered_nodes": 11,
+        "substrate_nodes": 17,
+        "cppn_nodes": 1,
+        "cppn_connections": 3,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.1524,
+        0.6356,
+        0.8364,
+        0.7411999999999999,
+        0.8780000000000001,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.022061333333333336,
+        0.027674666666666667,
+        0.03599733333333333,
+        0.044608,
+        0.05340533333333333,
+        0.07569066666666667
+      ],
+      "timestamp": "2026-03-22T19:37:18.163337"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 2,
+      "generations_run": 8,
+      "wall_time_s": 36.14414381980896,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.07969333333333334,
+      "solved": true,
+      "solve_generation": 7,
+      "final_metrics": {
+        "discovered_nodes": 15,
+        "substrate_nodes": 21,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.2008,
+        0.5192,
+        0.54,
+        0.6648000000000001,
+        0.6988,
+        0.7908,
+        0.7196,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.021994666666666666,
+        0.030170666666666665,
+        0.041682666666666666,
+        0.04971466666666667,
+        0.054165333333333336,
+        0.06019466666666666,
+        0.062477333333333336,
+        0.07969333333333334
+      ],
+      "timestamp": "2026-03-22T19:37:54.326250"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 3,
+      "generations_run": 5,
+      "wall_time_s": 19.11132287979126,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.06074933333333333,
+      "solved": true,
+      "solve_generation": 4,
+      "final_metrics": {
+        "discovered_nodes": 11,
+        "substrate_nodes": 17,
+        "cppn_nodes": 2,
+        "cppn_connections": 7,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.1648,
+        0.298,
+        0.5212000000000001,
+        0.37279999999999996,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.02146666666666667,
+        0.027626666666666667,
+        0.033368,
+        0.03543466666666666,
+        0.06074933333333333
+      ],
+      "timestamp": "2026-03-22T19:38:13.491957"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 4,
+      "generations_run": 3,
+      "wall_time_s": 6.74517035484314,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.04437066666666666,
+      "solved": true,
+      "solve_generation": 2,
+      "final_metrics": {
+        "discovered_nodes": 7,
+        "substrate_nodes": 13,
+        "cppn_nodes": 1,
+        "cppn_connections": 5,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.18719999999999998,
+        0.9272,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.020853333333333335,
+        0.027933333333333334,
+        0.04437066666666666
+      ],
+      "timestamp": "2026-03-22T19:38:20.251485"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 5,
+      "generations_run": 4,
+      "wall_time_s": 9.747514963150024,
+      "best_fitness": 0.992,
+      "final_mean_fitness": 0.048816,
+      "solved": true,
+      "solve_generation": 3,
+      "final_metrics": {
+        "discovered_nodes": 11,
+        "substrate_nodes": 17,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 0.992
+      },
+      "fitness_history_best": [
+        0.08760000000000001,
+        0.36119999999999997,
+        0.3771999999999999,
+        0.992
+      ],
+      "fitness_history_mean": [
+        0.020248,
+        0.026426666666666668,
+        0.028432000000000002,
+        0.048816
+      ],
+      "timestamp": "2026-03-22T19:38:30.015802"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 6,
+      "generations_run": 8,
+      "wall_time_s": 27.909589052200317,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.07060533333333333,
+      "solved": true,
+      "solve_generation": 7,
+      "final_metrics": {
+        "discovered_nodes": 12,
+        "substrate_nodes": 18,
+        "cppn_nodes": 2,
+        "cppn_connections": 6,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.18680000000000002,
+        0.3976,
+        0.5492,
+        0.5147999999999999,
+        0.806,
+        0.45039999999999997,
+        0.5292,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.021197333333333335,
+        0.025637333333333335,
+        0.030088000000000004,
+        0.03404444444444445,
+        0.04444266666666667,
+        0.048824,
+        0.05560533333333333,
+        0.07060533333333333
+      ],
+      "timestamp": "2026-03-22T19:38:57.968657"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 7,
+      "generations_run": 6,
+      "wall_time_s": 16.896013021469116,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.051077333333333336,
+      "solved": true,
+      "solve_generation": 5,
+      "final_metrics": {
+        "discovered_nodes": 9,
+        "substrate_nodes": 15,
+        "cppn_nodes": 1,
+        "cppn_connections": 5,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.2076,
+        0.3164,
+        0.4332,
+        0.4391999999999999,
+        0.8048,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.023090666666666666,
+        0.026933333333333333,
+        0.030049032258064517,
+        0.03579466666666667,
+        0.044712,
+        0.051077333333333336
+      ],
+      "timestamp": "2026-03-22T19:39:14.875804"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 8,
+      "generations_run": 3,
+      "wall_time_s": 9.381377935409546,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.03704533333333333,
+      "solved": true,
+      "solve_generation": 2,
+      "final_metrics": {
+        "discovered_nodes": 1,
+        "substrate_nodes": 7,
+        "cppn_nodes": 1,
+        "cppn_connections": 5,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.1664,
+        0.38,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.023381333333333334,
+        0.029656000000000002,
+        0.03704533333333333
+      ],
+      "timestamp": "2026-03-22T19:39:24.276220"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 9,
+      "generations_run": 4,
+      "wall_time_s": 15.197493076324463,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.044856,
+      "solved": true,
+      "solve_generation": 3,
+      "final_metrics": {
+        "discovered_nodes": 5,
+        "substrate_nodes": 11,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.08080000000000001,
+        0.09480000000000001,
+        0.5604000000000001,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.020522666666666668,
+        0.022658666666666667,
+        0.03213866666666667,
+        0.044856
+      ],
+      "timestamp": "2026-03-22T19:39:39.493991"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 10,
+      "generations_run": 6,
+      "wall_time_s": 20.769715785980225,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.056784,
+      "solved": true,
+      "solve_generation": 5,
+      "final_metrics": {
+        "discovered_nodes": 11,
+        "substrate_nodes": 17,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.42279999999999995,
+        0.2508,
+        0.35040000000000004,
+        0.3424,
+        0.4072,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.02372,
+        0.023989333333333335,
+        0.028256000000000003,
+        0.031005333333333336,
+        0.034336000000000005,
+        0.056784
+      ],
+      "timestamp": "2026-03-22T19:40:00.279748"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 11,
+      "generations_run": 3,
+      "wall_time_s": 9.381701946258545,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.036352,
+      "solved": true,
+      "solve_generation": 2,
+      "final_metrics": {
+        "discovered_nodes": 11,
+        "substrate_nodes": 17,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.1888,
+        0.19319999999999998,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.022608,
+        0.024288,
+        0.036352
+      ],
+      "timestamp": "2026-03-22T19:40:09.706633"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 12,
+      "generations_run": 5,
+      "wall_time_s": 15.477236032485962,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.05428266666666667,
+      "solved": true,
+      "solve_generation": 4,
+      "final_metrics": {
+        "discovered_nodes": 2,
+        "substrate_nodes": 8,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.6112,
+        0.63,
+        0.6112,
+        0.654,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.025850666666666668,
+        0.030853333333333333,
+        0.034312,
+        0.03990666666666667,
+        0.05428266666666667
+      ],
+      "timestamp": "2026-03-22T19:40:25.253681"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 13,
+      "generations_run": 14,
+      "wall_time_s": 73.10741996765137,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.083832,
+      "solved": true,
+      "solve_generation": 13,
+      "final_metrics": {
+        "discovered_nodes": 9,
+        "substrate_nodes": 15,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.6972,
+        0.5932,
+        0.636,
+        0.6499999999999999,
+        0.6564,
+        0.6004,
+        0.8051999999999999,
+        0.7836000000000001,
+        0.8036,
+        0.8032,
+        0.772,
+        0.7656,
+        0.8044,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.029733333333333334,
+        0.03437333333333333,
+        0.03824266666666667,
+        0.04436,
+        0.04630133333333333,
+        0.05678666666666667,
+        0.06439199999999999,
+        0.06581333333333333,
+        0.06970133333333334,
+        0.06536800000000001,
+        0.06833066666666668,
+        0.07389333333333332,
+        0.07376533333333334,
+        0.083832
+      ],
+      "timestamp": "2026-03-22T19:41:38.396533"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 14,
+      "generations_run": 9,
+      "wall_time_s": 44.31414794921875,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.08310666666666668,
+      "solved": true,
+      "solve_generation": 8,
+      "final_metrics": {
+        "discovered_nodes": 11,
+        "substrate_nodes": 17,
+        "cppn_nodes": 1,
+        "cppn_connections": 6,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.1992,
+        0.47240000000000004,
+        0.4295999999999999,
+        0.8004,
+        0.8544,
+        0.7648,
+        0.8064,
+        0.9328000000000001,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.022034666666666668,
+        0.029000000000000005,
+        0.037392,
+        0.043706493506493506,
+        0.05266666666666667,
+        0.055141333333333334,
+        0.06861333333333333,
+        0.07760533333333333,
+        0.08310666666666668
+      ],
+      "timestamp": "2026-03-22T19:42:22.730227"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 15,
+      "generations_run": 5,
+      "wall_time_s": 18.25853991508484,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.056098666666666665,
+      "solved": true,
+      "solve_generation": 4,
+      "final_metrics": {
+        "discovered_nodes": 11,
+        "substrate_nodes": 17,
+        "cppn_nodes": 2,
+        "cppn_connections": 7,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.288,
+        0.48119999999999996,
+        0.8044,
+        0.8196,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.021149333333333332,
+        0.029250666666666668,
+        0.04030666666666667,
+        0.05175466666666667,
+        0.056098666666666665
+      ],
+      "timestamp": "2026-03-22T19:42:41.012661"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 16,
+      "generations_run": 10,
+      "wall_time_s": 39.49427604675293,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.06335733333333333,
+      "solved": true,
+      "solve_generation": 9,
+      "final_metrics": {
+        "discovered_nodes": 14,
+        "substrate_nodes": 20,
+        "cppn_nodes": 3,
+        "cppn_connections": 9,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.17279999999999998,
+        0.2004,
+        0.244,
+        0.426,
+        0.42960000000000004,
+        0.5524,
+        0.5192,
+        0.5396000000000001,
+        0.6524,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.02162666666666667,
+        0.023466666666666667,
+        0.026194666666666668,
+        0.03161066666666667,
+        0.035978666666666666,
+        0.03883466666666666,
+        0.03783466666666667,
+        0.04367466666666667,
+        0.05403733333333334,
+        0.06335733333333333
+      ],
+      "timestamp": "2026-03-22T19:43:20.516909"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 17,
+      "generations_run": 5,
+      "wall_time_s": 14.683420181274414,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.05108533333333333,
+      "solved": true,
+      "solve_generation": 4,
+      "final_metrics": {
+        "discovered_nodes": 11,
+        "substrate_nodes": 17,
+        "cppn_nodes": 1,
+        "cppn_connections": 3,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.5956,
+        0.5492,
+        0.6083999999999999,
+        0.576,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.026682666666666664,
+        0.03332266666666667,
+        0.03923466666666667,
+        0.03760266666666667,
+        0.05108533333333333
+      ],
+      "timestamp": "2026-03-22T19:43:35.219245"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 18,
+      "generations_run": 6,
+      "wall_time_s": 23.999079942703247,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.06683466666666667,
+      "solved": true,
+      "solve_generation": 5,
+      "final_metrics": {
+        "discovered_nodes": 11,
+        "substrate_nodes": 17,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.1548,
+        0.3196,
+        0.4244,
+        0.4548,
+        0.7212000000000001,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.02089866666666667,
+        0.030338666666666667,
+        0.036567999999999996,
+        0.04439733333333334,
+        0.054064,
+        0.06683466666666667
+      ],
+      "timestamp": "2026-03-22T19:43:59.264235"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 19,
+      "generations_run": 5,
+      "wall_time_s": 18.992564916610718,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.05273333333333333,
+      "solved": true,
+      "solve_generation": 4,
+      "final_metrics": {
+        "discovered_nodes": 10,
+        "substrate_nodes": 16,
+        "cppn_nodes": 1,
+        "cppn_connections": 3,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.0928,
+        0.3076,
+        0.6736,
+        0.6312,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.020346666666666666,
+        0.027410666666666667,
+        0.03741333333333333,
+        0.040050666666666665,
+        0.05273333333333333
+      ],
+      "timestamp": "2026-03-22T19:44:18.264728"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 20,
+      "generations_run": 4,
+      "wall_time_s": 13.468134880065918,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.04531466666666667,
+      "solved": true,
+      "solve_generation": 3,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 6,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.3356,
+        0.4708,
+        0.5992,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.024301333333333335,
+        0.029288,
+        0.04165866666666667,
+        0.04531466666666667
+      ],
+      "timestamp": "2026-03-22T19:44:31.742388"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 21,
+      "generations_run": 6,
+      "wall_time_s": 22.50476598739624,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.062928,
+      "solved": true,
+      "solve_generation": 5,
+      "final_metrics": {
+        "discovered_nodes": 11,
+        "substrate_nodes": 17,
+        "cppn_nodes": 1,
+        "cppn_connections": 6,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.1588,
+        0.29280000000000006,
+        0.3296,
+        0.6588,
+        0.6144000000000001,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.022090666666666668,
+        0.025824,
+        0.028896,
+        0.04272,
+        0.05286933333333333,
+        0.062928
+      ],
+      "timestamp": "2026-03-22T19:44:54.277314"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 22,
+      "generations_run": 7,
+      "wall_time_s": 23.945645809173584,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.056215999999999995,
+      "solved": true,
+      "solve_generation": 6,
+      "final_metrics": {
+        "discovered_nodes": 10,
+        "substrate_nodes": 16,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.3016,
+        0.41319999999999996,
+        0.8048,
+        0.8048,
+        0.8032,
+        0.7928,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.027080000000000003,
+        0.03309866666666667,
+        0.03761866666666667,
+        0.040048,
+        0.04592266666666667,
+        0.051143999999999995,
+        0.056215999999999995
+      ],
+      "timestamp": "2026-03-22T19:45:18.298515"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 23,
+      "generations_run": 1,
+      "wall_time_s": 1.8571600914001465,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.02830666666666667,
+      "solved": true,
+      "solve_generation": 0,
+      "final_metrics": {
+        "discovered_nodes": 2,
+        "substrate_nodes": 8,
+        "cppn_nodes": 1,
+        "cppn_connections": 5,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.02830666666666667
+      ],
+      "timestamp": "2026-03-22T19:45:20.176130"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 24,
+      "generations_run": 1,
+      "wall_time_s": 1.8532381057739258,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.02835466666666667,
+      "solved": true,
+      "solve_generation": 0,
+      "final_metrics": {
+        "discovered_nodes": 3,
+        "substrate_nodes": 9,
+        "cppn_nodes": 1,
+        "cppn_connections": 5,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.02835466666666667
+      ],
+      "timestamp": "2026-03-22T19:45:22.034465"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 25,
+      "generations_run": 5,
+      "wall_time_s": 14.632292032241821,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.053880000000000004,
+      "solved": true,
+      "solve_generation": 4,
+      "final_metrics": {
+        "discovered_nodes": 2,
+        "substrate_nodes": 8,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.6436,
+        0.506,
+        0.6992,
+        0.5252000000000001,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.030264,
+        0.034544000000000005,
+        0.042923684210526315,
+        0.04430933333333333,
+        0.053880000000000004
+      ],
+      "timestamp": "2026-03-22T19:45:36.676353"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 26,
+      "generations_run": 7,
+      "wall_time_s": 24.48031497001648,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.058496,
+      "solved": true,
+      "solve_generation": 6,
+      "final_metrics": {
+        "discovered_nodes": 0,
+        "substrate_nodes": 5,
+        "cppn_nodes": 1,
+        "cppn_connections": 3,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.26,
+        0.6932,
+        0.6164,
+        0.7103999999999999,
+        0.7864000000000001,
+        0.7272000000000001,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.024285333333333336,
+        0.03378133333333334,
+        0.037488,
+        0.04372,
+        0.046418666666666664,
+        0.05053333333333333,
+        0.058496
+      ],
+      "timestamp": "2026-03-22T19:46:01.176596"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 27,
+      "generations_run": 7,
+      "wall_time_s": 32.70021414756775,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.07714666666666667,
+      "solved": true,
+      "solve_generation": 6,
+      "final_metrics": {
+        "discovered_nodes": 11,
+        "substrate_nodes": 17,
+        "cppn_nodes": 3,
+        "cppn_connections": 8,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.1456,
+        0.5888,
+        0.5399999999999999,
+        0.6108,
+        0.5272,
+        0.5452,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.022832,
+        0.027416,
+        0.03331733333333334,
+        0.04127466666666667,
+        0.04484266666666667,
+        0.051232,
+        0.07714666666666667
+      ],
+      "timestamp": "2026-03-22T19:46:33.914073"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 28,
+      "generations_run": 6,
+      "wall_time_s": 18.504909992218018,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.062413333333333335,
+      "solved": true,
+      "solve_generation": 5,
+      "final_metrics": {
+        "discovered_nodes": 6,
+        "substrate_nodes": 12,
+        "cppn_nodes": 1,
+        "cppn_connections": 5,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.2344,
+        0.2332,
+        0.24159999999999998,
+        0.8507999999999999,
+        0.7904000000000001,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.022810666666666667,
+        0.02584266666666667,
+        0.031466666666666664,
+        0.04015733333333334,
+        0.04390666666666667,
+        0.062413333333333335
+      ],
+      "timestamp": "2026-03-22T19:46:52.512980"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 3,
+      "seed": 29,
+      "generations_run": 2,
+      "wall_time_s": 6.692385911941528,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.042090666666666665,
+      "solved": true,
+      "solve_generation": 1,
+      "final_metrics": {
+        "discovered_nodes": 11,
+        "substrate_nodes": 17,
+        "cppn_nodes": 1,
+        "cppn_connections": 5,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.384,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.024082666666666665,
+        0.042090666666666665
+      ],
+      "timestamp": "2026-03-22T19:46:59.222840"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 0,
+      "generations_run": 3,
+      "wall_time_s": 73.99788808822632,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.035189333333333336,
+      "solved": true,
+      "solve_generation": 2,
+      "final_metrics": {
+        "discovered_nodes": 53,
+        "substrate_nodes": 59,
+        "cppn_nodes": 2,
+        "cppn_connections": 6,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.1488,
+        0.35200000000000004,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.021266666666666666,
+        0.024421333333333337,
+        0.035189333333333336
+      ],
+      "timestamp": "2026-03-22T19:48:13.231735"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 1,
+      "generations_run": 6,
+      "wall_time_s": 282.9574692249298,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.061621333333333334,
+      "solved": true,
+      "solve_generation": 5,
+      "final_metrics": {
+        "discovered_nodes": 57,
+        "substrate_nodes": 63,
+        "cppn_nodes": 1,
+        "cppn_connections": 3,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.0456,
+        0.12279999999999998,
+        0.6092,
+        0.8051999999999999,
+        0.8044,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.018954666666666665,
+        0.020226666666666667,
+        0.032101333333333336,
+        0.04467733333333333,
+        0.055743999999999995,
+        0.061621333333333334
+      ],
+      "timestamp": "2026-03-22T19:52:56.229446"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 2,
+      "generations_run": 3,
+      "wall_time_s": 50.354382038116455,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.03326933333333333,
+      "solved": true,
+      "solve_generation": 2,
+      "final_metrics": {
+        "discovered_nodes": 42,
+        "substrate_nodes": 48,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.08639999999999999,
+        0.2772,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.020352,
+        0.023869333333333333,
+        0.03326933333333333
+      ],
+      "timestamp": "2026-03-22T19:53:46.608808"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 3,
+      "generations_run": 6,
+      "wall_time_s": 207.47060203552246,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.05125866666666667,
+      "solved": true,
+      "solve_generation": 5,
+      "final_metrics": {
+        "discovered_nodes": 54,
+        "substrate_nodes": 60,
+        "cppn_nodes": 2,
+        "cppn_connections": 6,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.22759999999999997,
+        0.5584,
+        0.5292,
+        0.6228,
+        0.9024000000000001,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.022818666666666668,
+        0.030194666666666668,
+        0.03488,
+        0.04425066666666667,
+        0.045069333333333336,
+        0.05125866666666667
+      ],
+      "timestamp": "2026-03-22T19:57:14.161439"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 4,
+      "generations_run": 3,
+      "wall_time_s": 68.03852891921997,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.04073333333333334,
+      "solved": true,
+      "solve_generation": 2,
+      "final_metrics": {
+        "discovered_nodes": 67,
+        "substrate_nodes": 73,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.076,
+        0.8432000000000001,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.019648,
+        0.028997333333333337,
+        0.04073333333333334
+      ],
+      "timestamp": "2026-03-22T19:58:22.271772"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 5,
+      "generations_run": 6,
+      "wall_time_s": 212.6375789642334,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.056309333333333336,
+      "solved": true,
+      "solve_generation": 5,
+      "final_metrics": {
+        "discovered_nodes": 59,
+        "substrate_nodes": 65,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.1548,
+        0.65,
+        0.5704,
+        0.836,
+        0.8428000000000001,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.022168,
+        0.030848,
+        0.03433866666666667,
+        0.047768000000000005,
+        0.052176,
+        0.056309333333333336
+      ],
+      "timestamp": "2026-03-22T20:01:54.923634"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 6,
+      "generations_run": 10,
+      "wall_time_s": 494.8262550830841,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.07390133333333333,
+      "solved": true,
+      "solve_generation": 9,
+      "final_metrics": {
+        "discovered_nodes": 46,
+        "substrate_nodes": 52,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.062,
+        0.17600000000000002,
+        0.4596,
+        0.46880000000000005,
+        0.43479999999999996,
+        0.5704,
+        0.6167999999999999,
+        0.6087999999999999,
+        0.6856,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.01961066666666667,
+        0.022456,
+        0.031944,
+        0.04056266666666667,
+        0.04675733333333334,
+        0.04939466666666667,
+        0.06521066666666667,
+        0.06412266666666666,
+        0.06456533333333334,
+        0.07390133333333333
+      ],
+      "timestamp": "2026-03-22T20:10:09.763026"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 7,
+      "generations_run": 2,
+      "wall_time_s": 33.86501598358154,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.032144,
+      "solved": true,
+      "solve_generation": 1,
+      "final_metrics": {
+        "discovered_nodes": 13,
+        "substrate_nodes": 19,
+        "cppn_nodes": 1,
+        "cppn_connections": 5,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.11039999999999998,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.020701333333333332,
+        0.032144
+      ],
+      "timestamp": "2026-03-22T20:10:43.645020"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 8,
+      "generations_run": 3,
+      "wall_time_s": 65.8488461971283,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.03997066666666667,
+      "solved": true,
+      "solve_generation": 2,
+      "final_metrics": {
+        "discovered_nodes": 57,
+        "substrate_nodes": 63,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.0776,
+        0.1336,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.019816,
+        0.022106666666666667,
+        0.03997066666666667
+      ],
+      "timestamp": "2026-03-22T20:11:49.503098"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 9,
+      "generations_run": 6,
+      "wall_time_s": 245.4027910232544,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.053128,
+      "solved": true,
+      "solve_generation": 5,
+      "final_metrics": {
+        "discovered_nodes": 69,
+        "substrate_nodes": 75,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.0808,
+        0.136,
+        0.304,
+        0.6844,
+        0.5976,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.020061333333333334,
+        0.021554666666666666,
+        0.028192,
+        0.03423466666666667,
+        0.04539466666666667,
+        0.053128
+      ],
+      "timestamp": "2026-03-22T20:15:54.916666"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 10,
+      "generations_run": 3,
+      "wall_time_s": 78.12631511688232,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.03265066666666667,
+      "solved": true,
+      "solve_generation": 2,
+      "final_metrics": {
+        "discovered_nodes": 63,
+        "substrate_nodes": 69,
+        "cppn_nodes": 1,
+        "cppn_connections": 5,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.078,
+        0.22959999999999997,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.01938933333333333,
+        0.023098666666666667,
+        0.03265066666666667
+      ],
+      "timestamp": "2026-03-22T20:17:13.064079"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 11,
+      "generations_run": 3,
+      "wall_time_s": 82.84324216842651,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.047848,
+      "solved": true,
+      "solve_generation": 2,
+      "final_metrics": {
+        "discovered_nodes": 14,
+        "substrate_nodes": 20,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.3032,
+        0.4,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.022426666666666668,
+        0.027229333333333338,
+        0.047848
+      ],
+      "timestamp": "2026-03-22T20:18:35.926592"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 12,
+      "generations_run": 5,
+      "wall_time_s": 305.162446975708,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.069336,
+      "solved": true,
+      "solve_generation": 4,
+      "final_metrics": {
+        "discovered_nodes": 59,
+        "substrate_nodes": 65,
+        "cppn_nodes": 1,
+        "cppn_connections": 3,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.4664,
+        0.4744,
+        0.45600000000000007,
+        0.48119999999999996,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.023938666666666667,
+        0.028730666666666665,
+        0.050216,
+        0.05253066666666666,
+        0.069336
+      ],
+      "timestamp": "2026-03-22T20:23:41.099613"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 13,
+      "generations_run": 4,
+      "wall_time_s": 139.34528589248657,
+      "best_fitness": 0.9844000000000002,
+      "final_mean_fitness": 0.05017066666666667,
+      "solved": true,
+      "solve_generation": 3,
+      "final_metrics": {
+        "discovered_nodes": 12,
+        "substrate_nodes": 18,
+        "cppn_nodes": 2,
+        "cppn_connections": 7,
+        "fitness": 0.9844000000000002
+      },
+      "fitness_history_best": [
+        0.1236,
+        0.16760000000000003,
+        0.356,
+        0.9844000000000002
+      ],
+      "fitness_history_mean": [
+        0.021746666666666668,
+        0.023848,
+        0.03325066666666667,
+        0.05017066666666667
+      ],
+      "timestamp": "2026-03-22T20:26:00.453541"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 14,
+      "generations_run": 3,
+      "wall_time_s": 90.54276823997498,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.04626133333333333,
+      "solved": true,
+      "solve_generation": 2,
+      "final_metrics": {
+        "discovered_nodes": 58,
+        "substrate_nodes": 64,
+        "cppn_nodes": 2,
+        "cppn_connections": 7,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.8756,
+        0.8288,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.027085333333333336,
+        0.03004,
+        0.04626133333333333
+      ],
+      "timestamp": "2026-03-22T20:27:31.024802"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 15,
+      "generations_run": 3,
+      "wall_time_s": 98.88460683822632,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.04127466666666667,
+      "solved": true,
+      "solve_generation": 2,
+      "final_metrics": {
+        "discovered_nodes": 55,
+        "substrate_nodes": 61,
+        "cppn_nodes": 2,
+        "cppn_connections": 7,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.6788000000000001,
+        0.718,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.025888,
+        0.029504000000000002,
+        0.04127466666666667
+      ],
+      "timestamp": "2026-03-22T20:29:09.918068"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 16,
+      "generations_run": 3,
+      "wall_time_s": 93.22957611083984,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.033402666666666664,
+      "solved": true,
+      "solve_generation": 2,
+      "final_metrics": {
+        "discovered_nodes": 61,
+        "substrate_nodes": 67,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.06960000000000001,
+        0.23079999999999998,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.019549333333333332,
+        0.02396,
+        0.033402666666666664
+      ],
+      "timestamp": "2026-03-22T20:30:43.167781"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 17,
+      "generations_run": 1,
+      "wall_time_s": 16.498799085617065,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.030373333333333332,
+      "solved": true,
+      "solve_generation": 0,
+      "final_metrics": {
+        "discovered_nodes": 34,
+        "substrate_nodes": 40,
+        "cppn_nodes": 1,
+        "cppn_connections": 5,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.030373333333333332
+      ],
+      "timestamp": "2026-03-22T20:30:59.689053"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 18,
+      "generations_run": 2,
+      "wall_time_s": 50.43990993499756,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.028333333333333332,
+      "solved": true,
+      "solve_generation": 1,
+      "final_metrics": {
+        "discovered_nodes": 59,
+        "substrate_nodes": 65,
+        "cppn_nodes": 1,
+        "cppn_connections": 5,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.076,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.019749333333333334,
+        0.028333333333333332
+      ],
+      "timestamp": "2026-03-22T20:31:50.138935"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 19,
+      "generations_run": 5,
+      "wall_time_s": 166.21850490570068,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.04513333333333334,
+      "solved": true,
+      "solve_generation": 4,
+      "final_metrics": {
+        "discovered_nodes": 50,
+        "substrate_nodes": 56,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.4056,
+        0.4312,
+        0.4484,
+        0.8039999999999999,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.02340266666666667,
+        0.025482666666666667,
+        0.028607999999999998,
+        0.03722133333333333,
+        0.04513333333333334
+      ],
+      "timestamp": "2026-03-22T20:34:36.405111"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 20,
+      "generations_run": 3,
+      "wall_time_s": 98.11178588867188,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.035930666666666666,
+      "solved": true,
+      "solve_generation": 2,
+      "final_metrics": {
+        "discovered_nodes": 59,
+        "substrate_nodes": 65,
+        "cppn_nodes": 1,
+        "cppn_connections": 5,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.286,
+        0.3988,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.021250666666666668,
+        0.029186666666666666,
+        0.035930666666666666
+      ],
+      "timestamp": "2026-03-22T20:36:14.534749"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 21,
+      "generations_run": 4,
+      "wall_time_s": 225.83118414878845,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.05435733333333334,
+      "solved": true,
+      "solve_generation": 3,
+      "final_metrics": {
+        "discovered_nodes": 55,
+        "substrate_nodes": 61,
+        "cppn_nodes": 1,
+        "cppn_connections": 5,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.09000000000000001,
+        0.6096,
+        0.8036,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.020397333333333333,
+        0.028778666666666664,
+        0.040015999999999996,
+        0.05435733333333334
+      ],
+      "timestamp": "2026-03-22T20:40:00.400900"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 22,
+      "generations_run": 9,
+      "wall_time_s": 640.4736969470978,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.066064,
+      "solved": true,
+      "solve_generation": 8,
+      "final_metrics": {
+        "discovered_nodes": 56,
+        "substrate_nodes": 62,
+        "cppn_nodes": 3,
+        "cppn_connections": 8,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.22920000000000001,
+        0.47079999999999994,
+        0.41479999999999995,
+        0.4348000000000001,
+        0.47919999999999996,
+        0.9192,
+        0.8135999999999999,
+        0.8112,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.022362666666666666,
+        0.028557333333333334,
+        0.031189333333333333,
+        0.036909333333333336,
+        0.04061333333333333,
+        0.051896,
+        0.05969066666666666,
+        0.057536,
+        0.066064
+      ],
+      "timestamp": "2026-03-22T20:50:40.919055"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 23,
+      "generations_run": 5,
+      "wall_time_s": 203.62269020080566,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.04537066666666667,
+      "solved": true,
+      "solve_generation": 4,
+      "final_metrics": {
+        "discovered_nodes": 54,
+        "substrate_nodes": 60,
+        "cppn_nodes": 1,
+        "cppn_connections": 5,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.2124,
+        0.3556,
+        0.1992,
+        0.33280000000000004,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.022290666666666667,
+        0.024776,
+        0.027453333333333337,
+        0.0348,
+        0.04537066666666667
+      ],
+      "timestamp": "2026-03-22T20:54:04.569936"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 24,
+      "generations_run": 8,
+      "wall_time_s": 545.7962102890015,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.07424266666666667,
+      "solved": true,
+      "solve_generation": 7,
+      "final_metrics": {
+        "discovered_nodes": 56,
+        "substrate_nodes": 62,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.38999999999999996,
+        0.45519999999999994,
+        0.6092000000000001,
+        0.5635999999999999,
+        0.8443999999999999,
+        0.7112,
+        0.7588,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.022349333333333336,
+        0.027957333333333334,
+        0.04430728476821192,
+        0.046269333333333336,
+        0.05815466666666667,
+        0.054279999999999995,
+        0.06266133333333333,
+        0.07424266666666667
+      ],
+      "timestamp": "2026-03-22T21:03:10.427828"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 25,
+      "generations_run": 10,
+      "wall_time_s": 652.8236739635468,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.07740533333333333,
+      "solved": true,
+      "solve_generation": 9,
+      "final_metrics": {
+        "discovered_nodes": 50,
+        "substrate_nodes": 56,
+        "cppn_nodes": 1,
+        "cppn_connections": 9,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.6452,
+        0.7736,
+        0.77,
+        0.6156,
+        0.6268,
+        0.7132,
+        0.8392,
+        0.8800000000000001,
+        0.8128,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.025552000000000002,
+        0.029962666666666665,
+        0.036552,
+        0.045781333333333334,
+        0.04312,
+        0.04685333333333334,
+        0.05093333333333334,
+        0.0524,
+        0.06623466666666666,
+        0.07740533333333333
+      ],
+      "timestamp": "2026-03-22T21:14:03.268234"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 26,
+      "generations_run": 4,
+      "wall_time_s": 167.42196607589722,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.05938133333333333,
+      "solved": true,
+      "solve_generation": 3,
+      "final_metrics": {
+        "discovered_nodes": 55,
+        "substrate_nodes": 61,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.08720000000000001,
+        0.7048,
+        0.8583999999999999,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.020696,
+        0.031160000000000004,
+        0.03840533333333333,
+        0.05938133333333333
+      ],
+      "timestamp": "2026-03-22T21:16:50.704103"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 27,
+      "generations_run": 5,
+      "wall_time_s": 215.92711305618286,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.06553333333333333,
+      "solved": true,
+      "solve_generation": 4,
+      "final_metrics": {
+        "discovered_nodes": 44,
+        "substrate_nodes": 50,
+        "cppn_nodes": 2,
+        "cppn_connections": 6,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.45759999999999995,
+        0.44800000000000006,
+        0.4936,
+        0.9132,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.023224,
+        0.031109333333333336,
+        0.039920000000000004,
+        0.053744,
+        0.06553333333333333
+      ],
+      "timestamp": "2026-03-22T21:20:26.695720"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 28,
+      "generations_run": 6,
+      "wall_time_s": 439.3298771381378,
+      "best_fitness": 1.0,
+      "final_mean_fitness": 0.06908,
+      "solved": true,
+      "solve_generation": 5,
+      "final_metrics": {
+        "discovered_nodes": 56,
+        "substrate_nodes": 62,
+        "cppn_nodes": 1,
+        "cppn_connections": 4,
+        "fitness": 1.0
+      },
+      "fitness_history_best": [
+        0.0964,
+        0.9456,
+        0.924,
+        0.9292,
+        0.9263999999999999,
+        1.0
+      ],
+      "fitness_history_mean": [
+        0.021149333333333332,
+        0.03128,
+        0.04054133333333333,
+        0.05599733333333333,
+        0.060503999999999995,
+        0.06908
+      ],
+      "timestamp": "2026-03-22T21:27:46.046830"
+    },
+    {
+      "implementation": "pureples",
+      "depth": 4,
+      "seed": 29,
+      "generations_run": 6,
+      "wall_time_s": 323.9571349620819,
+      "best_fitness": 0.9596,
+      "final_mean_fitness": 0.062144,
+      "solved": true,
+      "solve_generation": 5,
+      "final_metrics": {
+        "discovered_nodes": 58,
+        "substrate_nodes": 64,
+        "cppn_nodes": 2,
+        "cppn_connections": 7,
+        "fitness": 0.9596
+      },
+      "fitness_history_best": [
+        0.3316,
+        0.8667999999999999,
+        0.8336,
+        0.9239999999999998,
+        0.8071999999999999,
+        0.9596
+      ],
+      "fitness_history_mean": [
+        0.022973333333333335,
+        0.032104,
+        0.039032,
+        0.047408,
+        0.05331612903225806,
+        0.062144
+      ],
+      "timestamp": "2026-03-22T21:33:10.031422"
+    }
+  ],
+  "metadata": {
+    "task": "CartPole-v1",
+    "depths": [
+      2,
+      3,
+      4
+    ],
+    "seeds": 30,
+    "generations": 100,
+    "pop_size": 150,
+    "implementations": "pureples",
+    "started": "2026-03-22T19:31:48.301749",
+    "num_episodes_per_eval": 5,
+    "solve_threshold": 0.95,
+    "finished": "2026-03-22T21:33:10.043272"
+  }
+}

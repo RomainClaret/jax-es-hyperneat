@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
+._*
+
+# JAX / local compilation caches
+.jax_cache/
+.jax_eshn_cache/
+
+# LaTeX / paper build artifacts (paper SOURCE is committed; build products are not)
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+texput.log
+
+# Regenerated figures (recomputed from committed result data)
+papers/*/figures/*.pdf
+papers/*/figures/*.png
+# ...except the quadtree paper's figures: they are built from scripts/figures/*.tex via
+# scripts/figures/build_figures.sh and are committed so the paper folder renders them without
+# a LaTeX toolchain.
+!papers/es-hyperneat-quadtree-problem/figures/*.pdf
+!papers/es-hyperneat-quadtree-problem/figures/*.png
+
+# NOTE: this repository commits its raw result data in-repo (papers/*/results/ and
+# papers/*/benchmark_checkpoints/), so those are intentionally NOT ignored here.
+# The Zenodo archive is an archival mirror only.

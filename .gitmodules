@@ -1,0 +1,6 @@
+[submodule "third_party/tensorneat"]
+	path = third_party/tensorneat
+	url = https://github.com/RomainClaret/tensorneat.git
+[submodule "third_party/pureples"]
+	path = third_party/pureples
+	url = https://github.com/RomainClaret/pureples.git

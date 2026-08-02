@@ -1,0 +1,49 @@
+name: Paper findings (live experiments)
+
+# Runs the SLOW tests that actually evolve small versions of the paper's experiments and
+# assert the published findings (the two solve-rate inversions, the circle ceiling, HSHG's
+# failure, determinism). These JIT-compile + evolve on CPU (~30-40 min in a runner), so they
+# are kept off the per-push gate and run on demand or weekly. For a faster ~15-min subset, see
+# quick-experiments.yml.
+#
+# Local validation (no push trigger here, so `act push` would no-op; use the dispatch event):
+#   act workflow_dispatch -W .github/workflows/paper-findings.yml \
+#     --container-architecture linux/amd64 \
+#     -P ubuntu-latest=catthehacker/ubuntu:act-latest --rm
+# Note: under act's x86 emulation this can run ~45-80 min (hence the 90-min timeout below).
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * 1"  # Mondays 06:00 UTC
+
+jobs:
+  live:
+    name: Run simple paper experiments (slow; CPU)
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout (with submodules)
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install jax-es-hyperneat + TensorNEAT + PUREPLES baseline
+        run: |
+          python -m pip install --upgrade pip
+          pip install "jax==0.6.1" "jaxlib==0.6.1" "numpy<2"
+          pip install -e ".[baseline]"          # core + neat-python==0.92 + gymnasium
+          pip install -e third_party/tensorneat
+          pip install -e third_party/pureples
+          pip install pytest
+
+      - name: Live paper-finding experiments (pytest -m slow)
+        env:
+          JAX_PLATFORMS: cpu
+          TF_CPP_MIN_LOG_LEVEL: "3"
+        run: pytest jax_es_hyperneat/tests -m slow -v --tb=short

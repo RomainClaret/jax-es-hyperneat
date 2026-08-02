@@ -1,0 +1,374 @@
+"""
+HSHG ES-HyperNEAT Circle classification experiment.
+Uses HSHG-based ES-HyperNEAT reimplementation with TensorNEAT for Circle problem.
+
+Circle classification: 2 continuous inputs (x, y), output 1 if inside
+circle of radius 0.5 centered at origin, else 0.
+100 random training points in [-1, 1]^2 with fixed seed.
+Fitness = -MSE (TensorNEAT convention: higher is better, so negative MSE).
+
+Identical to tensorneat_circle except substrate discovery uses HSHG instead of quadtree.
+"""
+
+import os
+import sys
+import time
+import pickle
+import numpy as np
+import jax
+import jax.numpy as jnp
+from typing import Dict, Any, Tuple, Optional, List
+from dataclasses import dataclass
+
+# Force CPU for fair comparison - ES-HyperNEAT discovery is CPU-based
+os.environ['JAX_PLATFORM_NAME'] = 'cpu'
+
+# CRITICAL: Force CPU in JAX config before any JAX operations
+jax.config.update('jax_platform_name', 'cpu')
+print(f"[CPU-ONLY MODE] JAX devices: {jax.devices()}")
+print(f"[CPU-ONLY MODE] JAX default backend: {jax.default_backend()}")
+
+# Import TensorNEAT components
+from tensorneat import algorithm, genome, problem
+from tensorneat.common import ACT, AGG, State
+from tensorneat.pipeline import Pipeline
+
+# HSHG ES-HyperNEAT components (one package up).
+from ..eshyperneat_hshg import ESHyperNEATHSHG
+from ..substrate import ESHyperNEATSubstrate
+
+
+def generate_circle_data(n_points: int = 100, radius: float = 0.5, seed: int = 42):
+    """Generate circle classification dataset.
+
+    Args:
+        n_points: Number of random points in [-1, 1]^2.
+        radius: Circle radius centered at origin.
+        seed: Random seed for reproducibility.
+
+    Returns:
+        Tuple of (inputs_array, targets_array) as numpy arrays
+        with bias column appended to inputs.
+    """
+    rng = np.random.RandomState(seed)
+    points = rng.uniform(-1.0, 1.0, size=(n_points, 2))
+    labels = ((points[:, 0] ** 2 + points[:, 1] ** 2) <= radius ** 2).astype(np.float32)
+    # Append bias column
+    bias = np.ones((n_points, 1), dtype=np.float32)
+    inputs = np.hstack([points.astype(np.float32), bias])
+    targets = labels.reshape(-1, 1)
+    return inputs, targets
+
+
+@dataclass
+class CircleConfig:
+    """Configuration for Circle ES-HyperNEAT experiment matching PUREPLES."""
+    # NEAT parameters for evolving CPPN
+    pop_size: int = 150
+    species_size: int = 15
+    survival_threshold: float = 0.2
+    max_nodes: int = 20
+
+    # ES-HyperNEAT specific parameters (matching PUREPLES)
+    band_threshold: float = 0.2
+    variance_threshold: float = 0.03
+    division_threshold: float = 0.5
+    initial_depth: int = 0  # Small version
+    max_depth: int = 1  # Small version
+    iteration_level: int = 1
+    max_weight: float = 5.0
+    activation: str = 'sigmoid'
+
+    # Training parameters
+    max_generations: int = 300
+    fitness_target: float = -0.025  # TensorNEAT uses negative MSE
+    seed: int = 42
+
+    # Substrate coordinates matching PUREPLES
+    # Two inputs (x, y) + bias
+    input_coors: Tuple[Tuple[float, float], ...] = ((-1.0, -1.0), (0.0, -1.0), (1.0, -1.0))
+    output_coors: Tuple[Tuple[float, float], ...] = ((0.0, 1.0),)
+
+    # CPPN activation functions matching PUREPLES
+    cppn_activations: Tuple[str, ...] = ('tanh', 'sin', 'gauss')
+
+
+class CircleProblem(problem.FuncFit):
+    """Circle classification problem with bias input to match PUREPLES."""
+
+    def __init__(self):
+        super().__init__(error_method="mse")
+        self._inputs, self._targets = generate_circle_data()
+
+    @property
+    def inputs(self):
+        return self._inputs
+
+    @property
+    def targets(self):
+        return self._targets
+
+    @property
+    def input_shape(self):
+        return self._inputs.shape  # (100, 3): x, y, bias
+
+    @property
+    def output_shape(self):
+        return self._targets.shape  # (100, 1)
+
+
+class HSHGESHyperNEATExperiment:
+    """HSHG ES-HyperNEAT experiment for Circle classification."""
+
+    def __init__(self, config: Optional[CircleConfig] = None,
+                 save_checkpoints: bool = False,
+                 checkpoint_dir: Optional[str] = None,
+                 version: str = 'S'):
+        """
+        Initialize the experiment.
+
+        Args:
+            config: Experiment configuration
+            save_checkpoints: Whether to save checkpoints
+            checkpoint_dir: Directory for checkpoints
+            version: 'S' (small), 'M' (medium), or 'L' (large) - affects ES-HyperNEAT depth
+        """
+        self.config = config or CircleConfig()
+        self.save_checkpoints = save_checkpoints
+        self.checkpoint_dir = checkpoint_dir
+        self.version = version
+
+        # Adjust ES-HyperNEAT parameters based on version
+        if version == 'M':
+            self.config.initial_depth = 1
+            self.config.max_depth = 2
+        elif version == 'L':
+            self.config.initial_depth = 2
+            self.config.max_depth = 3
+
+        # Create checkpoint directory if needed
+        if save_checkpoints and checkpoint_dir:
+            os.makedirs(checkpoint_dir, exist_ok=True)
+
+        # Initialize tracking
+        self.generation_history = []
+        self.best_genomes = []
+        self.es_metrics_history = []
+        self.start_time = None
+        self.algorithm = None
+        self.problem = None
+        self._setup_experiment()
+
+    def _setup_experiment(self):
+        """Set up HSHG ES-HyperNEAT algorithm and problem."""
+        # Create substrate matching PUREPLES
+        substrate = ESHyperNEATSubstrate(
+            input_coordinates=list(self.config.input_coors),
+            hidden_coordinates=[],  # ES-HyperNEAT discovers these
+            output_coordinates=list(self.config.output_coors),
+            include_bias=False,  # Bias is already in input coordinates
+            band_threshold=self.config.band_threshold,
+            variance_threshold=self.config.variance_threshold,
+        )
+
+        # Create CPPN genome (for evolving connection patterns)
+        cppn_genome = genome.DefaultGenome(
+            num_inputs=5,  # x1, y1, x2, y2, bias
+            num_outputs=1,  # connection weight
+            max_nodes=self.config.max_nodes,
+            output_transform=ACT.tanh,
+        )
+
+        # Create NEAT algorithm for evolving CPPN
+        neat_algo = algorithm.NEAT(
+            genome=cppn_genome,
+            pop_size=self.config.pop_size,
+            species_size=self.config.species_size,
+            survival_threshold=self.config.survival_threshold,
+            verbose=False,
+        )
+
+        # Create HSHG ES-HyperNEAT algorithm (HSHG instead of quadtree)
+        self.algorithm = ESHyperNEATHSHG(
+            substrate=substrate,
+            neat=neat_algo,
+            max_weight=self.config.max_weight,
+            band_threshold=self.config.band_threshold,
+            initial_depth=self.config.initial_depth,
+            max_depth=self.config.max_depth,
+            variance_threshold=self.config.variance_threshold,
+            division_threshold=self.config.division_threshold,
+            iteration_level=self.config.iteration_level,
+            activation=ACT.sigmoid if self.config.activation == 'sigmoid' else ACT.tanh,
+            activate_time=1,
+            output_transform=ACT.identity,
+        )
+
+        # Create Circle problem
+        self.problem = CircleProblem()
+
+    def run(self):
+        """
+        Run the HSHG ES-HyperNEAT experiment.
+
+        Returns:
+            Tuple of (final_state, statistics_dict)
+        """
+        self.start_time = time.time()
+
+        # Initialize state with random key
+        state = State(randkey=jax.random.PRNGKey(self.config.seed))
+        state = self.algorithm.setup(state)
+
+        # Initialize tracking
+        best_fitness_history = []
+        mean_fitness_history = []
+        min_fitness_history = []
+        es_metrics_history = []
+
+        print(f"\nRunning HSHG ES-HyperNEAT Circle classification...")
+        print(f"Population size: {self.config.pop_size}")
+        print(f"ES-HyperNEAT parameters:")
+        print(f"  Initial depth: {self.config.initial_depth}")
+        print(f"  Max depth: {self.config.max_depth}")
+        print(f"  Band threshold: {self.config.band_threshold}")
+        print(f"  Variance threshold: {self.config.variance_threshold}")
+
+        best_fitness_overall = float('-inf')
+        best_genome = None
+        best_metrics = None
+
+        for generation in range(self.config.max_generations):
+            # Get current population
+            pop = self.algorithm.ask(state)
+
+            # Extract metrics about discovered topology
+            discovered_nodes_list = []
+            substrate_nodes_list = []
+            total_connections_list = []
+            cppn_nodes_list = []
+            cppn_connections_list = []
+
+            # Transform population and evaluate
+            fitnesses = []
+            for i in range(len(pop[0])):
+                individual = (pop[0][i], pop[1][i])
+
+                try:
+                    transformed = self.algorithm.transform(state, individual)
+
+                    fitness = self.problem.evaluate(state, None, self.algorithm.forward, transformed)
+                    fitnesses.append(fitness)
+
+                    cppn_nodes = int(jnp.sum(~jnp.isnan(individual[0][:, 0])))
+                    cppn_connections = int(jnp.sum(~jnp.isnan(individual[1][:, 0])))
+
+                    cppn_nodes_list.append(cppn_nodes)
+                    cppn_connections_list.append(cppn_connections)
+
+                    if hasattr(self.algorithm, 'last_discovery_metrics'):
+                        discovered_nodes_list.append(self.algorithm.last_discovery_metrics['discovered_nodes'])
+                        substrate_nodes_list.append(self.algorithm.last_discovery_metrics['substrate_nodes'])
+                        total_connections_list.append(self.algorithm.last_discovery_metrics['total_connections'])
+                    else:
+                        discovered_nodes_list.append(0)
+                        substrate_nodes_list.append(len(self.config.input_coors) + len(self.config.output_coors))
+                        total_connections_list.append(0)
+
+                except Exception as e:
+                    print(f"Warning: Transform failed for individual {i}: {e}")
+                    import traceback
+                    traceback.print_exc()
+                    fitnesses.append(float('-inf'))
+                    cppn_nodes_list.append(0)
+                    cppn_connections_list.append(0)
+
+            fitnesses = jnp.array(fitnesses)
+
+            # Update state with fitness
+            state = self.algorithm.tell(state, fitnesses)
+
+            # Convert negative MSE to positive accuracy
+            accuracies = 1.0 + fitnesses  # Since fitness is -MSE
+
+            # Track statistics
+            best_idx = jnp.argmax(fitnesses)
+            best_fitness = float(accuracies[best_idx])
+            mean_fitness = float(jnp.mean(accuracies))
+            min_fitness = float(jnp.min(accuracies))
+
+            best_fitness_history.append(best_fitness)
+            mean_fitness_history.append(mean_fitness)
+            min_fitness_history.append(min_fitness)
+
+            # Track best overall
+            if best_fitness > best_fitness_overall:
+                best_fitness_overall = best_fitness
+                best_genome = (pop[0][best_idx], pop[1][best_idx])
+                best_metrics = {
+                    'cppn_nodes': cppn_nodes_list[best_idx],
+                    'cppn_connections': cppn_connections_list[best_idx],
+                    'discovered_nodes': discovered_nodes_list[best_idx] if discovered_nodes_list else 0,
+                    'substrate_nodes': substrate_nodes_list[best_idx] if substrate_nodes_list else len(self.config.input_coors) + len(self.config.output_coors),
+                    'total_connections': total_connections_list[best_idx] if total_connections_list else 0
+                }
+
+            # ES-HyperNEAT specific metrics
+            es_metrics = {
+                'generation': generation,
+                'discovered_nodes': int(np.mean(discovered_nodes_list)) if discovered_nodes_list else 0,
+                'total_connections': int(np.mean(total_connections_list)) if total_connections_list else 0,
+                'substrate_nodes': int(np.mean(substrate_nodes_list)) if substrate_nodes_list else len(self.config.input_coors) + len(self.config.output_coors),
+                'cppn_nodes': int(np.mean(cppn_nodes_list)) if cppn_nodes_list else 0,
+                'cppn_connections': int(np.mean(cppn_connections_list)) if cppn_connections_list else 0
+            }
+            es_metrics_history.append(es_metrics)
+
+            if generation % 10 == 0:
+                print(f"Generation {generation}: Best fitness = {best_fitness:.6f}, "
+                      f"Mean = {mean_fitness:.6f}, CPPN nodes = {es_metrics['cppn_nodes']}")
+
+            # Garbage collection to prevent memory leak
+            import gc
+            gc.collect()
+
+            # Check for early termination
+            if best_fitness >= 0.975:
+                print(f"Target fitness reached at generation {generation}")
+                break
+
+        # Extract detailed metrics from best genome
+        if best_genome is not None:
+            try:
+                best_transformed = self.algorithm.transform(state, best_genome)
+                discovered_nodes = 0
+                total_connections = 0
+                substrate_nodes = len(self.config.input_coors) + discovered_nodes + len(self.config.output_coors)
+                best_metrics.update({
+                    'discovered_nodes': discovered_nodes,
+                    'substrate_nodes': substrate_nodes,
+                    'total_connections': total_connections
+                })
+            except Exception as e:
+                print(f"Warning: Could not extract detailed metrics: {e}")
+
+        # Compile statistics
+        generation_stats = {
+            'fitness': {
+                'best': best_fitness_history,
+                'mean': mean_fitness_history,
+                'min': min_fitness_history
+            },
+            'generations': len(best_fitness_history),
+            'total_time': time.time() - self.start_time,
+            'es_metrics': es_metrics_history,
+            'final_metrics': {
+                'fitness': best_fitness_overall,
+                'cppn_nodes': best_metrics.get('cppn_nodes', 0) if best_metrics else 0,
+                'cppn_connections': best_metrics.get('cppn_connections', 0) if best_metrics else 0,
+                'discovered_nodes': best_metrics.get('discovered_nodes', 0) if best_metrics else 0,
+                'substrate_nodes': best_metrics.get('substrate_nodes', 0) if best_metrics else 0
+            }
+        }
+
+        return state, generation_stats

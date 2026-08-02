@@ -1,0 +1,46 @@
+name: Quick paper experiments (live subset; CPU)
+
+# A fast subset of the live paper experiments: every task evolves one generation, plus the
+# two cheapest published-finding checks (HSHG over-discovery fails; PUREPLES cannot fit sine).
+# Runs the SAME baseline install as paper-findings.yml (neat-python + gymnasium + pureples),
+# so it doubles as a check that that install path works. Kept to ~15 min so it is practical to
+# validate locally with act. The exhaustive suite lives in paper-findings.yml.
+#
+# Local validation (this workflow has no push trigger, so `act push` would no-op; use dispatch):
+#   act workflow_dispatch -W .github/workflows/quick-experiments.yml \
+#     --container-architecture linux/amd64 \
+#     -P ubuntu-latest=catthehacker/ubuntu:act-latest --rm
+
+on:
+  workflow_dispatch:
+
+jobs:
+  quick:
+    name: Quick live experiments (CPU)
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout (with submodules)
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install jax-es-hyperneat + TensorNEAT + PUREPLES baseline
+        run: |
+          python -m pip install --upgrade pip
+          pip install "jax==0.6.1" "jaxlib==0.6.1" "numpy<2"
+          pip install -e ".[baseline]"          # core + neat-python==0.92 + gymnasium
+          pip install -e third_party/tensorneat
+          pip install -e third_party/pureples
+          pip install pytest
+
+      - name: Quick live experiments (each task 1 gen + HSHG/PUREPLES findings)
+        env:
+          JAX_PLATFORMS: cpu
+          TF_CPP_MIN_LOG_LEVEL: "3"
+        run: pytest jax_es_hyperneat/tests -m slow -k "one_generation or hshg_fails_xor or pureples_fails_sine" -v --tb=short

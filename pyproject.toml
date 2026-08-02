@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jax-es-hyperneat"
+version = "0.1.0"
+description = "JAX-ESHN: a JAX/TensorNEAT implementation of ES-HyperNEAT for diagnosing the quadtree substrate-discovery bottleneck"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "GPL-3.0-or-later" }
+authors = [
+    { name = "Romain Claret" },
+    { name = "Michael O'Neill" },
+    { name = "Paul Cotofrei" },
+    { name = "Kilian Stoffel" },
+]
+keywords = ["neuroevolution", "ES-HyperNEAT", "HyperNEAT", "NEAT", "CPPN", "quadtree",
+            "JAX", "GPU-acceleration", "vectorization", "evolutionary-computation",
+            "neural-networks", "machine-learning", "artificial-intelligence", "AI"]
+
+# Core runtime dependencies. TensorNEAT (CPPN/NEAT engine) and PUREPLES (CPU baseline)
+# are NOT on PyPI; both are provided by pinned git submodules and installed separately:
+#     pip install -e third_party/tensorneat
+#     pip install -e third_party/pureples   # baseline only; pulls in neat-python
+# (see README). Versions track the environment the published experiments ran on
+# (JAX 0.6.x, NumPy 1.26.x).
+dependencies = [
+    "jax>=0.5,<0.12",
+    "jaxlib>=0.5,<0.12",
+    "numpy>=1.24,<3",
+    "pydantic>=2.0",
+    "pyyaml>=6.0",   # imported at import time by _compat (config_manager / parameter_translator)
+]
+
+[project.optional-dependencies]
+# Statistics for the papers/ analysis scripts (the verify scripts are stdlib-only).
+analysis = ["scipy>=1.10"]
+# Re-running the PUREPLES CPU baseline and the CartPole task from scratch (optional;
+# not needed to reproduce the paper's tables/figures from the committed JSON).
+baseline = ["neat-python==0.92", "gymnasium>=0.29,<2"]
+dev = ["pytest>=7.0"]
+
+[project.urls]
+Repository = "https://github.com/RomainClaret/jax-es-hyperneat"
+
+[tool.setuptools.packages.find]
+include = ["jax_es_hyperneat*"]
+exclude = ["papers*", "third_party*", "scripts*"]
+
+[tool.pytest.ini_options]
+markers = [
+    "slow: end-to-end runs that JIT-compile and evolve (minutes); excluded from the fast CI gate",
+]
